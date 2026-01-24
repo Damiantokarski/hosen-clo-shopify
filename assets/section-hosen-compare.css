@@ -1,0 +1,318 @@
+/* Hosen Compare Section */
+.hosen-compare {
+  padding-top: var(--padding-top, 40px);
+  padding-bottom: var(--padding-bottom, 40px);
+  overflow-x: hidden;
+}
+
+.hosen-compare__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .hosen-compare__container {
+    padding: 0 3rem;
+  }
+}
+
+/* Grid */
+.hosen-compare__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .hosen-compare__grid {
+    grid-template-columns: 1.8fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+/* Image Comparison Slider */
+.hosen-compare__slider {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+.hosen-compare__slider-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+.hosen-compare__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hosen-compare__image--before {
+  z-index: 1;
+  clip-path: inset(0 calc(100% - var(--slider-start, 50%)) 0 0);
+}
+
+.hosen-compare__image--after {
+  z-index: 0;
+}
+
+.hosen-compare__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hosen-compare__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.hosen-compare__placeholder .placeholder-svg {
+  width: 60%;
+  max-width: 200px;
+  opacity: 0.5;
+}
+
+/* Slider Handle */
+.hosen-compare__slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--slider-start, 50%);
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hosen-compare__slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.hosen-compare__slider-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  cursor: ew-resize;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hosen-compare__slider-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hosen-compare__slider-button svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #333;
+}
+
+/* Product Card */
+.hosen-compare__product {
+  width: 100%;
+}
+
+.hosen-compare__card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hosen-compare__card--placeholder {
+  pointer-events: none;
+}
+
+.hosen-compare__product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  aspect-ratio: 3 / 4;
+}
+
+.hosen-compare__product-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.hosen-compare__product-image--secondary {
+  opacity: 0;
+}
+
+.hosen-compare__card:hover .hosen-compare__product-image--primary {
+  opacity: 0;
+}
+
+.hosen-compare__card:hover .hosen-compare__product-image--secondary {
+  opacity: 1;
+}
+
+/* Quick View Button */
+.hosen-compare__quick-view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.4rem 2rem;
+  background-color: rgba(30, 30, 30, 0.95);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.hosen-compare__card:hover .hosen-compare__quick-view {
+  transform: translateY(0);
+}
+
+.hosen-compare__quick-view-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.hosen-compare__quick-view-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hosen-compare__card:hover .hosen-compare__quick-view-icon {
+  animation: hosen-compare-arrow 0.6s ease-in-out infinite;
+}
+
+@keyframes hosen-compare-arrow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(3px, -3px);
+  }
+}
+
+/* Product Info */
+.hosen-compare__product-info {
+  padding: 1.2rem 0;
+}
+
+/* Vendor */
+.hosen-compare__vendor {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c9a227;
+  margin-bottom: 0.5rem;
+}
+
+/* Title */
+.hosen-compare__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (min-width: 750px) {
+  .hosen-compare__title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Price */
+.hosen-compare__price {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.hosen-compare__price--regular,
+.hosen-compare__price--sale {
+  color: rgb(var(--color-foreground));
+  font-weight: 400;
+}
+
+.hosen-compare__price--sale {
+  color: #c00;
+}
+
+.hosen-compare__price--compare {
+  color: rgba(var(--color-foreground), 0.5);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* Placeholder styles */
+.hosen-compare__card--placeholder .hosen-compare__vendor,
+.hosen-compare__card--placeholder .hosen-compare__title,
+.hosen-compare__card--placeholder .hosen-compare__price {
+  opacity: 0.5;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hosen-compare__product-image,
+  .hosen-compare__quick-view {
+    transition: none;
+  }
+
+  .hosen-compare__card:hover .hosen-compare__quick-view-icon {
+    animation: none;
+  }
+}
+
+/* Touch devices */
+@media (hover: none) {
+  .hosen-compare__quick-view {
+    transform: translateY(0);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}

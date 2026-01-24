@@ -1,0 +1,318 @@
+{
+	"sections": {
+		"hosen_carousel": {
+			"type": "hosen-carousel",
+			"blocks": {
+				"slide_1": {
+					"type": "slide",
+					"settings": {
+						"subheading": "",
+						"heading": "BOLD PRINTS. BAGGY FITS. ACCESSORIES INCLUDED.",
+						"heading_size": "h1",
+						"text": "<p>Designed for effortless dressing, our casual wear and matching accessories keep you comfortable—and styled—all day long.</p>",
+						"button_label": "SHOP ALL",
+						"button_link": "shopify://collections/all",
+						"content_position": "middle-center"
+					}
+				},
+				"slide_2": {
+					"type": "slide",
+					"settings": {
+						"subheading": "",
+						"heading": "NEW ARRIVALS",
+						"heading_size": "h1",
+						"text": "<p>Discover our latest collection of streetwear essentials.</p>",
+						"button_label": "SHOP NOW",
+						"button_link": "shopify://collections/all",
+						"content_position": "middle-center"
+					}
+				},
+				"slide_3": {
+					"type": "slide",
+					"settings": {
+						"subheading": "",
+						"heading": "SEASONAL SALE",
+						"heading_size": "h1",
+						"text": "<p>Up to 50% off on selected items. Limited time only.</p>",
+						"button_label": "VIEW SALE",
+						"button_link": "shopify://collections/all",
+						"content_position": "middle-center"
+					}
+				}
+			},
+			"block_order": ["slide_1", "slide_2", "slide_3"],
+			"settings": {
+				"full_width": true,
+				"height_mobile": 500,
+				"height_desktop": 700,
+				"autoplay": true,
+				"autoplay_speed": 5,
+				"overlay_opacity": 20
+			}
+		},
+		"hosen_heading": {
+			"type": "hosen-heading",
+			"settings": {
+				"subheading": "BEST SELLERS",
+				"heading": "MOST WANTED PIECES",
+				"heading_size": "h1",
+				"link_label": "SHOP BEST SELLERS",
+				"link_url": "shopify://collections/all",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 20
+			}
+		},
+		"hosen_heading2": {
+			"type": "hosen-heading",
+			"settings": {
+				"subheading": "BEST SELLERS",
+				"heading": "MOST WANTED PIECES",
+				"heading_size": "h1",
+				"link_label": "SHOP BEST SELLERS",
+				"link_url": "shopify://collections/all",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 20
+			}
+		},
+		"hosen_heading3": {
+			"type": "hosen-heading",
+			"settings": {
+				"subheading": "BEST SELLERS",
+				"heading": "MOST WANTED PIECES",
+				"heading_size": "h1",
+				"link_label": "SHOP BEST SELLERS",
+				"link_url": "shopify://collections/all",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 20
+			}
+		},
+		"hosen_products": {
+			"type": "hosen-products",
+			"blocks": {
+				"product_1": {
+					"type": "product",
+					"settings": {}
+				},
+				"product_2": {
+					"type": "product",
+					"settings": {}
+				},
+				"product_3": {
+					"type": "product",
+					"settings": {}
+				}
+			},
+			"block_order": ["product_1", "product_2", "product_3"],
+			"settings": {
+				"show_vendor": true,
+				"color_scheme": "scheme-1",
+				"padding_top": 20,
+				"padding_bottom": 60
+			}
+		},
+		"hosen_compare": {
+			"type": "hosen-compare",
+			"settings": {
+				"slider_start": 50,
+				"show_vendor": true,
+				"color_scheme": "scheme-1",
+				"padding_top": 40,
+				"padding_bottom": 40
+			}
+		},
+		"hosen_featured": {
+			"type": "hosen-featured",
+			"blocks": {
+				"product_1": {
+					"type": "product",
+					"settings": {}
+				},
+				"product_2": {
+					"type": "product",
+					"settings": {}
+				},
+				"product_3": {
+					"type": "product",
+					"settings": {}
+				}
+			},
+			"block_order": ["product_1", "product_2", "product_3"],
+			"settings": {
+				"subheading": "NEW AUTUMN COLLECTION",
+				"heading": "NEW GO-TO COLLECTION",
+				"heading_size": "h1",
+				"description": "<p>Get ready to hit the streets with our new collection of sport and casual wear.</p>",
+				"button_label": "SHOP COLLECTION",
+				"button_link": "shopify://collections/all",
+				"show_vendor": true,
+				"show_swatches": true,
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 60
+			}
+		},
+		"hosen_countdown": {
+			"type": "hosen-countdown",
+			"settings": {
+				"heading": "MID-SEASON SALE",
+				"heading_size": "h1",
+				"countdown_date": "2026-02-01 00:00",
+				"days_label": "Days",
+				"hours_label": "Hours",
+				"minutes_label": "Minutes",
+				"seconds_label": "Seconds",
+				"button_label": "SHOP SALE",
+				"button_link": "shopify://collections/all",
+				"overlay_opacity": 40,
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 60
+			}
+		},
+		"hosen_hotspot": {
+			"type": "hosen-hotspot",
+			"blocks": {
+				"hotspot_1": {
+					"type": "hotspot",
+					"settings": {
+						"position_x": 30,
+						"position_y": 25
+					}
+				},
+				"hotspot_2": {
+					"type": "hotspot",
+					"settings": {
+						"position_x": 70,
+						"position_y": 60
+					}
+				}
+			},
+			"block_order": ["hotspot_1", "hotspot_2"],
+			"settings": {
+				"show_vendor": true,
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 60
+			}
+		},
+		"hosen_about": {
+			"type": "hosen-about",
+			"blocks": {
+				"tab_1": {
+					"type": "tab",
+					"settings": {
+						"tab_title": "MISSION",
+						"description": "<p>We're committed to providing top-quality sportswear you can rely on, ensuring customer satisfaction, and reducing our environmental impact with sustainable practices.</p>"
+					}
+				},
+				"tab_2": {
+					"type": "tab",
+					"settings": {
+						"tab_title": "COMMITMENTS",
+						"description": "<p>Our commitment extends beyond products. We pledge to maintain ethical manufacturing, fair labor practices, and transparent business operations.</p>"
+					}
+				},
+				"tab_3": {
+					"type": "tab",
+					"settings": {
+						"tab_title": "VALUES",
+						"description": "<p>Innovation, integrity, and inclusivity guide everything we do. We believe in creating fashion that empowers everyone to express their unique style.</p>"
+					}
+				}
+			},
+			"block_order": ["tab_1", "tab_2", "tab_3"],
+			"settings": {
+				"subheading": "ABOUT US",
+				"button_label": "EXPLORE OUR STORY",
+				"button_link": "shopify://pages/about",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 60
+			}
+		},
+		"hosen_faq": {
+			"type": "hosen-faq",
+			"blocks": {
+				"question_1": {
+					"type": "question",
+					"settings": {
+						"question": "HOW LONG DOES IT TAKE FOR MY ORDER TO ARRIVE?",
+						"answer": "<p>Shipping times vary depending on your location and shipping method selected during checkout. Standard shipping typically takes 5-7 business days, while expedited shipping can take 1-3 business days.</p>"
+					}
+				},
+				"question_2": {
+					"type": "question",
+					"settings": {
+						"question": "WHAT IS YOUR RETURN POLICY?",
+						"answer": "<p>We offer a 30-day return policy for all unused items in their original packaging. Simply contact our customer service team to initiate a return and receive a prepaid shipping label.</p>"
+					}
+				},
+				"question_3": {
+					"type": "question",
+					"settings": {
+						"question": "DO YOU OFFER INTERNATIONAL SHIPPING?",
+						"answer": "<p>Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by destination. You can see the exact cost at checkout.</p>"
+					}
+				}
+			},
+			"block_order": ["question_1", "question_2", "question_3"],
+			"settings": {
+				"subheading": "FAQ",
+				"heading": "QUESTIONS & ANSWERS",
+				"heading_size": "h1",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 60
+			}
+		},
+		"hosen_instagram": {
+			"type": "hosen-instagram",
+			"blocks": {
+				"image_1": {
+					"type": "image",
+					"settings": {}
+				},
+				"image_2": {
+					"type": "image",
+					"settings": {}
+				},
+				"image_3": {
+					"type": "image",
+					"settings": {}
+				},
+				"image_4": {
+					"type": "image",
+					"settings": {}
+				}
+			},
+			"block_order": ["image_1", "image_2", "image_3", "image_4"],
+			"settings": {
+				"subheading": "STAY IN TOUCH",
+				"heading": "GIVE US A FOLLOW @BERLIN",
+				"heading_size": "h1",
+				"link_label": "GET INSPIRED WITH @BERLIN",
+				"link_url": "https://instagram.com",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 60
+			}
+		}
+	},
+	"order": [
+		"hosen_carousel",
+		"hosen_heading",
+		"hosen_products",
+		"hosen_heading2",
+		"hosen_compare",
+		"hosen_featured",
+		"hosen_countdown",
+		"hosen_heading3",
+		"hosen_hotspot",
+		"hosen_about",
+		"hosen_faq",
+		"hosen_instagram"
+	]
+}

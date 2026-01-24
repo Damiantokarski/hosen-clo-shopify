@@ -1,0 +1,26 @@
+/* Dark Mode Toggle Button */
+.header__icon--darkmode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  color: rgb(var(--color-foreground));
+  transition: color 0.3s ease;
+}
+
+.header__icon--darkmode:hover {
+  color: rgb(var(--color-foreground), 0.75);
+}
+
+.darkmode-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode-icon--dark {
+  display: none;
+}

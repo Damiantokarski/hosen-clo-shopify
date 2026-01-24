@@ -1,0 +1,322 @@
+.hosen-featured {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+
+.hosen-featured__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hosen-featured__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Left Content */
+.hosen-featured__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.hosen-featured__subheading {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+  opacity: 0.7;
+}
+
+.hosen-featured__title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hosen-featured__title.h0 {
+  font-size: 3.5rem;
+}
+
+.hosen-featured__title.h1 {
+  font-size: 2.8rem;
+}
+
+.hosen-featured__title.h2 {
+  font-size: 2rem;
+}
+
+.hosen-featured__title.h3 {
+  font-size: 1.5rem;
+}
+
+.hosen-featured__description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgb(var(--color-foreground));
+  opacity: 0.8;
+  max-width: 300px;
+}
+
+.hosen-featured__description p {
+  margin: 0;
+}
+
+/* Button */
+.hosen-featured__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 2.4rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  max-width: fit-content;
+}
+
+@media screen and (min-width: 750px) {
+  .hosen-featured__button {
+    padding: 1.6rem 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+.hosen-featured__button:hover {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
+}
+
+.hosen-featured__button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hosen-featured__button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.hosen-featured__button-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hosen-featured__button:hover .hosen-featured__button-icon {
+  transform: translate(3px, -3px);
+  animation: hosen-arrow-diagonal 0.6s ease-in-out infinite;
+}
+
+@keyframes hosen-arrow-diagonal {
+  0%, 100% {
+    transform: translate(3px, -3px);
+  }
+  50% {
+    transform: translate(6px, -6px);
+  }
+}
+
+/* Products Grid */
+.hosen-featured__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hosen-featured__product {
+  display: flex;
+  flex-direction: column;
+}
+
+.hosen-featured__card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hosen-featured__image-wrapper {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  
+}
+
+.hosen-featured__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.hosen-featured__image--secondary {
+  opacity: 0;
+}
+
+.hosen-featured__card:hover .hosen-featured__image--primary {
+  opacity: 0;
+}
+
+.hosen-featured__card:hover .hosen-featured__image--secondary {
+  opacity: 1;
+}
+
+.hosen-featured__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hosen-featured__placeholder .placeholder-svg {
+  width: 60%;
+  height: 60%;
+  fill: #ccc;
+}
+
+/* Swatches */
+.hosen-featured__swatches {
+  display: flex;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.hosen-featured__swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hosen-featured__swatch-more {
+  font-size: 0.7rem;
+  color: rgb(var(--color-foreground));
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+}
+
+/* Product Info */
+.hosen-featured__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hosen-featured__vendor {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+  opacity: 0.6;
+}
+
+.hosen-featured__product-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  color: rgb(var(--color-foreground));
+}
+
+.hosen-featured__price {
+  font-size: 0.85rem;
+  color: rgb(var(--color-foreground));
+  opacity: 0.8;
+}
+
+.hosen-featured__price--sale {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.hosen-featured__price--compare {
+  text-decoration: line-through;
+  opacity: 0.5;
+  margin-left: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 989px) {
+  .hosen-featured__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hosen-featured__content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hosen-featured__description {
+    max-width: 100%;
+  }
+
+  .hosen-featured__products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .hosen-featured__container {
+    padding: 0 1rem;
+  }
+
+  .hosen-featured__title.h0 {
+    font-size: 2.5rem;
+  }
+
+  .hosen-featured__title.h1 {
+    font-size: 2rem;
+  }
+
+  .hosen-featured__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hosen-featured__product:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .hosen-featured__products {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .hosen-featured__product-title {
+    font-size: 0.75rem;
+  }
+
+  .hosen-featured__price {
+    font-size: 0.75rem;
+  }
+}

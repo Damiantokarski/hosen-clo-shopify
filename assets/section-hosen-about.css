@@ -1,0 +1,217 @@
+.hosen-about {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+
+.hosen-about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hosen-about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Left Content */
+.hosen-about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.hosen-about__subheading {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+  opacity: 0.6;
+}
+
+/* Tab Buttons */
+.hosen-about__tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hosen-about__tab {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.25);
+  transition: color 0.3s ease;
+  line-height: 1.1;
+}
+
+.hosen-about__tab:hover {
+  color: rgba(var(--color-foreground), 0.5);
+}
+
+.hosen-about__tab--active {
+  color: rgb(var(--color-foreground));
+}
+
+/* Descriptions */
+.hosen-about__descriptions {
+  position: relative;
+  min-height: 100px;
+  display: grid;
+}
+
+.hosen-about__description {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgb(var(--color-foreground));
+  max-width: 400px;
+}
+
+.hosen-about__description p {
+  margin: 0;
+}
+
+.hosen-about__description--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Button */
+.hosen-about__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.hosen-about__button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.hosen-about__button-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+.hosen-about__button:hover .hosen-about__button-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Right Image */
+.hosen-about__image-wrapper {
+  position: relative;
+}
+
+.hosen-about__images {
+  display: grid;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hosen-about__image-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.hosen-about__image-slide--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hosen-about__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.hosen-about__placeholder {
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.hosen-about__placeholder .placeholder-svg {
+  width: 50%;
+  height: 50%;
+  fill: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 989px) {
+  .hosen-about__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .hosen-about__tab {
+    font-size: 1.75rem;
+  }
+
+  .hosen-about__description {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .hosen-about__container {
+    padding: 0 1rem;
+  }
+
+  .hosen-about__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hosen-about__content {
+    order: 2;
+  }
+
+  .hosen-about__image-wrapper {
+    order: 1;
+  }
+
+  .hosen-about__tab {
+    font-size: 1.5rem;
+  }
+
+  .hosen-about__descriptions {
+    min-height: 80px;
+  }
+
+  .hosen-about__description {
+    font-size: 0.9rem;
+  }
+}

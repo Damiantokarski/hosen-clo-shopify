@@ -1,0 +1,326 @@
+{{ 'section-hosen-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="hosen-footer color-{{ section.settings.color_scheme }}">
+  <div class="hosen-footer__container page-width">
+    
+    <!-- Main Footer -->
+    <div class="hosen-footer__main">
+      
+      <!-- Brand Column -->
+      <div class="hosen-footer__brand">
+        {% if section.settings.logo != blank %}
+          <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="{{ shop.name }}" class="hosen-footer__logo">
+        {% else %}
+          <h2 class="hosen-footer__brand-name">{{ section.settings.brand_name | default: shop.name }}</h2>
+        {% endif %}
+        
+        {% if section.settings.brand_description != blank %}
+          <div class="hosen-footer__brand-description">{{ section.settings.brand_description }}</div>
+        {% endif %}
+      </div>
+      
+      <!-- Navigation Columns -->
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'menu' %}
+            <div class="hosen-footer__column" {{ block.shopify_attributes }}>
+              {% if block.settings.heading != blank %}
+                <h3 class="hosen-footer__column-title">{{ block.settings.heading }}</h3>
+              {% endif %}
+              
+              {% if block.settings.menu != blank %}
+                <ul class="hosen-footer__menu">
+                  {% for link in linklists[block.settings.menu].links %}
+                    <li class="hosen-footer__menu-item">
+                      <a href="{{ link.url }}" class="hosen-footer__menu-link">{{ link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          
+          {% when 'social' %}
+            <div class="hosen-footer__column" {{ block.shopify_attributes }}>
+              {% if block.settings.heading != blank %}
+                <h3 class="hosen-footer__column-title">{{ block.settings.heading }}</h3>
+              {% endif %}
+              
+              <ul class="hosen-footer__social">
+                {% if block.settings.twitter_url != blank %}
+                  <li class="hosen-footer__social-item">
+                    <a href="{{ block.settings.twitter_url }}" class="hosen-footer__social-link" target="_blank" rel="noopener">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      </svg>
+                      <span>Twitter</span>
+                    </a>
+                  </li>
+                {% endif %}
+                {% if block.settings.facebook_url != blank %}
+                  <li class="hosen-footer__social-item">
+                    <a href="{{ block.settings.facebook_url }}" class="hosen-footer__social-link" target="_blank" rel="noopener">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                      <span>Facebook</span>
+                    </a>
+                  </li>
+                {% endif %}
+                {% if block.settings.pinterest_url != blank %}
+                  <li class="hosen-footer__social-item">
+                    <a href="{{ block.settings.pinterest_url }}" class="hosen-footer__social-link" target="_blank" rel="noopener">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                      </svg>
+                      <span>Pinterest</span>
+                    </a>
+                  </li>
+                {% endif %}
+                {% if block.settings.instagram_url != blank %}
+                  <li class="hosen-footer__social-item">
+                    <a href="{{ block.settings.instagram_url }}" class="hosen-footer__social-link" target="_blank" rel="noopener">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                      </svg>
+                      <span>Instagram</span>
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
+          
+          {% when 'newsletter' %}
+            <div class="hosen-footer__newsletter" {{ block.shopify_attributes }}>
+              {% if block.settings.heading != blank %}
+                <h3 class="hosen-footer__column-title">{{ block.settings.heading }}</h3>
+              {% endif %}
+              
+              {% form 'customer', class: 'hosen-footer__newsletter-form' %}
+                <div class="hosen-footer__newsletter-field">
+                  <input 
+                    type="email" 
+                    name="contact[email]" 
+                    placeholder="{{ block.settings.placeholder | default: 'E-mail' }}"
+                    class="hosen-footer__newsletter-input"
+                    required
+                  >
+                  <button type="submit" class="hosen-footer__newsletter-button">
+                    <span>{{ block.settings.button_label | default: 'SUBSCRIBE' }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+                <input type="hidden" name="contact[tags]" value="newsletter">
+              {% endform %}
+              
+              {% if block.settings.description != blank %}
+                <p class="hosen-footer__newsletter-description">{{ block.settings.description }}</p>
+              {% endif %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+      
+    </div>
+    
+  </div>
+  
+  <!-- Bottom Bar -->
+  <div class="hosen-footer__bottom">
+    <div class="hosen-footer__bottom-container page-width">
+      
+      <!-- Payment Icons -->
+      <div class="hosen-footer__payments">
+        {% if section.settings.show_payment_icons %}
+          {{ shop.enabled_payment_types | payment_type_svg_tag }}
+        {% endif %}
+      </div>
+      
+      <!-- Policy Links -->
+      <div class="hosen-footer__policies">
+        {% for policy in shop.policies %}
+          {% if policy != blank %}
+            <a href="{{ policy.url }}" class="hosen-footer__policy-link">{{ policy.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+      <!-- Copyright -->
+      <div class="hosen-footer__copyright">
+        <span>&copy; Copyright, </span>
+        <a href="{{ routes.root_url }}">{{ shop.name }}</a>
+        <span>, {{ 'now' | date: '%Y' }}</span>
+        {% if section.settings.show_powered_by %}
+          <span class="hosen-footer__powered-by">
+            {{ powered_by_link }}
+          </span>
+        {% endif %}
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Hosen Footer",
+  "tag": "section",
+  "class": "section-footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "brand_name",
+      "label": "Brand name (if no logo)",
+      "default": "BERLIN"
+    },
+    {
+      "type": "richtext",
+      "id": "brand_description",
+      "label": "Brand description",
+      "default": "<p>Special thanks to <a href=\"#\">Taikan</a> for generously providing us with their stunning product imagery. Kindly visit their website to make real purchases of their products.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_powered_by",
+      "label": "Show 'Powered by Shopify'",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "SHOP"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Social links",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "CONTACTS"
+        },
+        {
+          "type": "url",
+          "id": "twitter_url",
+          "label": "Twitter URL"
+        },
+        {
+          "type": "url",
+          "id": "facebook_url",
+          "label": "Facebook URL"
+        },
+        {
+          "type": "url",
+          "id": "pinterest_url",
+          "label": "Pinterest URL"
+        },
+        {
+          "type": "url",
+          "id": "instagram_url",
+          "label": "Instagram URL"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "JOIN OUR NEWSLETTER"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Input placeholder",
+          "default": "E-mail"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "SUBSCRIBE"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Subscribe to receive exclusive offers."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hosen Footer",
+      "blocks": [
+        {
+          "type": "menu",
+          "settings": {
+            "heading": "SHOP"
+          }
+        },
+        {
+          "type": "menu",
+          "settings": {
+            "heading": "COMPANY"
+          }
+        },
+        {
+          "type": "social",
+          "settings": {
+            "heading": "CONTACTS",
+            "twitter_url": "https://twitter.com",
+            "facebook_url": "https://facebook.com",
+            "pinterest_url": "https://pinterest.com",
+            "instagram_url": "https://instagram.com"
+          }
+        },
+        {
+          "type": "newsletter",
+          "settings": {
+            "heading": "JOIN OUR NEWSLETTER"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,192 @@
+.hosen-instagram {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+
+.hosen-instagram__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.hosen-instagram__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.hosen-instagram__header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hosen-instagram__subheading {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+  opacity: 0.6;
+}
+
+.hosen-instagram__title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  color: rgb(var(--color-foreground));
+}
+
+.hosen-instagram__title.h0 {
+  font-size: 3rem;
+}
+
+.hosen-instagram__title.h1 {
+  font-size: 2.5rem;
+}
+
+.hosen-instagram__title.h2 {
+  font-size: 2rem;
+}
+
+.hosen-instagram__title.h3 {
+  font-size: 1.5rem;
+}
+
+/* Link */
+.hosen-instagram__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hosen-instagram__link:hover {
+  opacity: 0.7;
+}
+
+.hosen-instagram__link-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Grid */
+.hosen-instagram__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.hosen-instagram__item {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.hosen-instagram__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hosen-instagram__item:hover .hosen-instagram__image {
+  transform: scale(1.05);
+}
+
+.hosen-instagram__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hosen-instagram__placeholder .placeholder-svg {
+  width: 50%;
+  height: 50%;
+  fill: #ccc;
+}
+
+/* Overlay */
+.hosen-instagram__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hosen-instagram__item:hover .hosen-instagram__overlay {
+  opacity: 1;
+}
+
+.hosen-instagram__overlay-icon {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 989px) {
+  .hosen-instagram__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hosen-instagram__title.h0 {
+    font-size: 2rem;
+  }
+
+  .hosen-instagram__title.h1 {
+    font-size: 1.75rem;
+  }
+
+  .hosen-instagram__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .hosen-instagram__container {
+    padding: 0 1rem;
+  }
+
+  .hosen-instagram__header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hosen-instagram__grid {
+    gap: 0.75rem;
+  }
+
+  .hosen-instagram__item {
+    border-radius: 4px;
+  }
+}

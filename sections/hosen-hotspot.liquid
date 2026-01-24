@@ -1,0 +1,227 @@
+{{ 'section-hosen-hotspot.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'hosen-hotspot.js' | asset_url }}" defer="defer"></script>
+
+<div class="hosen-hotspot color-{{ section.settings.color_scheme }}" style="--padding-top: {{ section.settings.padding_top }}px; --padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="hosen-hotspot__container page-width">
+    <div class="hosen-hotspot__grid">
+      
+      <!-- Left Image with Hotspots -->
+      <div class="hosen-hotspot__image-wrapper">
+        {% if section.settings.main_image != blank %}
+          <img 
+            src="{{ section.settings.main_image | image_url: width: 1000 }}"
+            srcset="{{ section.settings.main_image | image_url: width: 500 }} 500w,
+                    {{ section.settings.main_image | image_url: width: 750 }} 750w,
+                    {{ section.settings.main_image | image_url: width: 1000 }} 1000w"
+            sizes="(min-width: 990px) 50vw, 100vw"
+            alt="{{ section.settings.main_image.alt | default: 'Lookbook image' }}"
+            loading="lazy"
+            class="hosen-hotspot__main-image"
+          >
+        {% else %}
+          <div class="hosen-hotspot__placeholder">
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {% endif %}
+        
+        <!-- Hotspot Buttons -->
+        {% for block in section.blocks %}
+          {% if block.type == 'hotspot' %}
+            <button 
+              class="hosen-hotspot__button" 
+              style="top: {{ block.settings.position_y }}%; left: {{ block.settings.position_x }}%;"
+              data-hotspot-index="{{ forloop.index0 }}"
+              {{ block.shopify_attributes }}
+            >
+              <span class="hosen-hotspot__button-icon">+</span>
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+      <!-- Right Product Card Slider -->
+      <div class="hosen-hotspot__product">
+        <div class="hosen-hotspot__slider" data-slider>
+          {% for block in section.blocks %}
+            {% if block.type == 'hotspot' %}
+              {% assign product = block.settings.product %}
+              <div class="hosen-hotspot__slide {% if forloop.first %}hosen-hotspot__slide--active{% endif %}" data-slide-index="{{ forloop.index0 }}">
+                {% if product != blank %}
+                  <a href="{{ product.url }}" class="hosen-hotspot__card">
+                    <div class="hosen-hotspot__product-image-wrapper">
+                      <div class="hosen-hotspot__product-slider" data-product-slider="{{ forloop.index0 }}">
+                        {% for image in product.images limit: 2 %}
+                          <img 
+                            src="{{ image | image_url: width: 800 }}"
+                            srcset="{{ image | image_url: width: 400 }} 400w,
+                                    {{ image | image_url: width: 600 }} 600w,
+                                    {{ image | image_url: width: 800 }} 800w"
+                            sizes="(min-width: 990px) 25vw, 50vw"
+                            alt="{{ image.alt | default: product.title }}"
+                            loading="lazy"
+                            class="hosen-hotspot__product-image {% if forloop.first %}hosen-hotspot__product-image--active{% endif %}"
+                            data-image-index="{{ forloop.index0 }}"
+                          >
+                        {% endfor %}
+                      </div>
+                      
+                      <!-- Product Slider Arrows -->
+                      <button class="hosen-hotspot__arrow hosen-hotspot__arrow--prev" data-arrow="prev" data-target="{{ forloop.index0 }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                      <button class="hosen-hotspot__arrow hosen-hotspot__arrow--next" data-arrow="next" data-target="{{ forloop.index0 }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                      
+                      <!-- Dots -->
+                      <div class="hosen-hotspot__dots" data-dots="{{ forloop.index0 }}">
+                        {% for image in product.images limit: 2 %}
+                          <span class="hosen-hotspot__dot {% if forloop.first %}hosen-hotspot__dot--active{% endif %}" data-dot-index="{{ forloop.index0 }}"></span>
+                        {% endfor %}
+                      </div>
+                    </div>
+                    
+                    <div class="hosen-hotspot__info">
+                      {% if section.settings.show_vendor and product.vendor != blank %}
+                        <span class="hosen-hotspot__vendor">{{ product.vendor }}</span>
+                      {% endif %}
+                      <h3 class="hosen-hotspot__product-title">{{ product.title }}</h3>
+                      <div class="hosen-hotspot__price">
+                        {% if product.compare_at_price > product.price %}
+                          <span class="hosen-hotspot__price--sale">{{ product.price | money }}</span>
+                          <span class="hosen-hotspot__price--compare">{{ product.compare_at_price | money }}</span>
+                        {% else %}
+                          <span>{{ product.price | money }}</span>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </a>
+                {% else %}
+                  <div class="hosen-hotspot__card hosen-hotspot__card--placeholder">
+                    <div class="hosen-hotspot__product-image-wrapper">
+                      <div class="hosen-hotspot__placeholder-product">
+                        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    </div>
+                    <div class="hosen-hotspot__info">
+                      <span class="hosen-hotspot__vendor">Brand Name</span>
+                      <h3 class="hosen-hotspot__product-title">Product Title</h3>
+                      <div class="hosen-hotspot__price">0,00 zł</div>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hosen Hotspot",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main lookbook image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hotspot",
+      "name": "Hotspot",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "range",
+          "id": "position_x",
+          "label": "Horizontal position (%)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "position_y",
+          "label": "Vertical position (%)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hosen Hotspot",
+      "blocks": [
+        {
+          "type": "hotspot",
+          "settings": {
+            "position_x": 30,
+            "position_y": 25
+          }
+        },
+        {
+          "type": "hotspot",
+          "settings": {
+            "position_x": 70,
+            "position_y": 60
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
