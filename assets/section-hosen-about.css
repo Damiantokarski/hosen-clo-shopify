@@ -6,7 +6,7 @@
 .hosen-about__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 3rem;
 }
 
 .hosen-about__grid {
@@ -25,7 +25,7 @@
 }
 
 .hosen-about__subheading {
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
   text-align: left;
   cursor: pointer;
   font-family: 'Oswald', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.6rem;
   font-weight: 700;
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.25);
@@ -75,7 +75,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   line-height: 1.7;
   color: rgb(var(--color-foreground));
   max-width: 400px;
@@ -91,37 +91,60 @@
 }
 
 /* Button */
-.hosen-about__button {
+.hosen-featured__button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 1.5rem;
-  background-color: rgb(var(--color-button));
-  color: rgb(var(--color-button-text));
-  text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  gap: 1rem;
+  padding: 1.4rem 2.4rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
   transition: all 0.3s ease;
-  width: fit-content;
-  margin-top: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  max-width: fit-content;
 }
 
-.hosen-about__button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+@media screen and (min-width: 750px) {
+  .hosen-featured__button {
+    padding: 1.6rem 3rem;
+    font-size: 1.2rem;
+  }
 }
 
-.hosen-about__button-icon {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.3s ease;
+.hosen-featured__button:hover {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
 }
 
-.hosen-about__button:hover .hosen-about__button-icon {
-  transform: translate(2px, -2px);
+.hosen-featured__button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hosen-featured__button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.hosen-featured__button-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hosen-featured__button:hover .hosen-featured__button-icon {
+  transform: translate(3px, -3px);
+  animation: hosen-arrow-diagonal 0.6s ease-in-out infinite;
 }
 
 /* Right Image */
@@ -131,7 +154,6 @@
 
 .hosen-about__images {
   display: grid;
-  border-radius: 8px;
   overflow: hidden;
 }
 

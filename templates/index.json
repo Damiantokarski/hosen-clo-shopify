@@ -89,6 +89,45 @@
 				"padding_bottom": 20
 			}
 		},
+		"hosen_heading4": {
+			"type": "hosen-heading",
+			"settings": {
+				"subheading": "BEST SELLERS",
+				"heading": "MOST WANTED PIECES",
+				"heading_size": "h1",
+				"link_label": "SHOP BEST SELLERS",
+				"link_url": "shopify://collections/all",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 20
+			}
+		},
+		"hosen_heading5": {
+			"type": "hosen-heading",
+			"settings": {
+				"subheading": "BEST SELLERS",
+				"heading": "MOST WANTED PIECES",
+				"heading_size": "h1",
+				"link_label": "SHOP BEST SELLERS",
+				"link_url": "shopify://collections/all",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 20
+			}
+		},
+		"hosen_heading6": {
+			"type": "hosen-heading",
+			"settings": {
+				"subheading": "BEST SELLERS",
+				"heading": "MOST WANTED PIECES",
+				"heading_size": "h1",
+				"link_label": "SHOP BEST SELLERS",
+				"link_url": "shopify://collections/all",
+				"color_scheme": "scheme-1",
+				"padding_top": 60,
+				"padding_bottom": 20
+			}
+		},
 		"hosen_products": {
 			"type": "hosen-products",
 			"blocks": {
@@ -233,6 +272,22 @@
 				"padding_bottom": 60
 			}
 		},
+		"hosen_separator1": {
+			"type": "hosen-separator",
+			"settings": {
+				"color_scheme": "scheme-1",
+				"padding_top": 20,
+				"padding_bottom": 20
+			}
+		},
+		"hosen_separator2": {
+			"type": "hosen-separator",
+			"settings": {
+				"color_scheme": "scheme-1",
+				"padding_top": 20,
+				"padding_bottom": 20
+			}
+		},
 		"hosen_faq": {
 			"type": "hosen-faq",
 			"blocks": {
@@ -304,15 +359,20 @@
 	"order": [
 		"hosen_carousel",
 		"hosen_heading",
-		"hosen_products",
-		"hosen_heading2",
-		"hosen_compare",
-		"hosen_featured",
 		"hosen_countdown",
+		"hosen_heading2",
+		"hosen_products",
 		"hosen_heading3",
+		"hosen_compare",
+		"hosen_separator2",	
+		"hosen_featured",
+		"hosen_heading4",
 		"hosen_hotspot",
+		"hosen_separator1",
 		"hosen_about",
+		"hosen_heading5",
 		"hosen_faq",
+		"hosen_heading6",
 		"hosen_instagram"
 	]
 }

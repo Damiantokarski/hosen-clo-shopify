@@ -9,6 +9,13 @@
   padding: 0 1.5rem;
 }
 
+@media screen and (min-width: 749px) {
+  .hosen-featured__container {
+    padding: 0 3rem;
+  }
+}
+
+
 .hosen-featured__grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -41,20 +48,17 @@
   margin: 0;
 }
 
-.hosen-featured__title.h0 {
-  font-size: 3.5rem;
-}
 
 .hosen-featured__title.h1 {
-  font-size: 2.8rem;
+  font-size: 3.6rem;
 }
 
 .hosen-featured__title.h2 {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 .hosen-featured__title.h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .hosen-featured__description {
@@ -152,7 +156,7 @@
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+
 }
 
 .hosen-featured__image-wrapper {
@@ -199,6 +203,63 @@
   fill: #ccc;
 }
 
+/* Quick View Button */
+.hosen-featured__quick-view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.4rem 2rem;
+  background-color: rgba(30, 30, 30, 0.95);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.hosen-featured__card:hover .hosen-featured__quick-view {
+  transform: translateY(0);
+}
+
+.hosen-featured__quick-view-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.hosen-featured__quick-view-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hosen-featured__card:hover .hosen-featured__quick-view-icon {
+  animation: hosen-featured-arrow 0.6s ease-in-out infinite;
+}
+
+@keyframes hosen-featured-arrow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(3px, -3px);
+  }
+}
+
+/* Product Info */
+.hosen-featured__info {
+  padding: 1.2rem 0;
+}
+
 /* Swatches */
 .hosen-featured__swatches {
   display: flex;
@@ -221,45 +282,86 @@
   align-items: center;
 }
 
-/* Product Info */
-.hosen-featured__info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
 
+
+/* Vendor */
 .hosen-featured__vendor {
-  font-size: 0.7rem;
+  display: block;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgb(var(--color-foreground));
-  opacity: 0.6;
+  color: #c9a227;
+  margin-bottom: 0.5rem;
 }
 
+/* Product Title */
 .hosen-featured__product-title {
-  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
   color: rgb(var(--color-foreground));
 }
 
+@media screen and (min-width: 750px) {
+  .hosen-featured__product-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Price */
 .hosen-featured__price {
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.hosen-featured__price--regular,
+.hosen-featured__price--sale {
   color: rgb(var(--color-foreground));
-  opacity: 0.8;
+  font-weight: 400;
 }
 
 .hosen-featured__price--sale {
-  color: #dc2626;
-  font-weight: 600;
+  color: #c00;
 }
 
 .hosen-featured__price--compare {
+  color: rgba(var(--color-foreground), 0.5);
   text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* Placeholder styles */
+.hosen-featured__card--placeholder .hosen-featured__vendor,
+.hosen-featured__card--placeholder .hosen-featured__product-title,
+.hosen-featured__card--placeholder .hosen-featured__price {
   opacity: 0.5;
-  margin-left: 0.5rem;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hosen-featured__image,
+  .hosen-featured__quick-view {
+    transition: none;
+  }
+
+  .hosen-featured__card:hover .hosen-featured__quick-view-icon {
+    animation: none;
+  }
+}
+
+/* Touch devices */
+@media (hover: none) {
+  .hosen-featured__quick-view {
+    transform: translateY(0);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
 }
 
 /* Responsive */
@@ -285,10 +387,7 @@
 }
 
 @media screen and (max-width: 749px) {
-  .hosen-featured__container {
-    padding: 0 1rem;
-  }
-
+  
   .hosen-featured__title.h0 {
     font-size: 2.5rem;
   }
@@ -314,6 +413,7 @@
 
   .hosen-featured__product-title {
     font-size: 0.75rem;
+    margin-top: 0;
   }
 
   .hosen-featured__price {

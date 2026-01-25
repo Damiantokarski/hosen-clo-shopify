@@ -2,19 +2,7 @@
 <script src="{{ 'hosen-faq.js' | asset_url }}" defer="defer"></script>
 
 <div class="hosen-faq color-{{ section.settings.color_scheme }}" style="--padding-top: {{ section.settings.padding_top }}px; --padding-bottom: {{ section.settings.padding_bottom }}px;">
-  <div class="hosen-faq__container page-width">
-    
-    <!-- Header -->
-    <div class="hosen-faq__header">
-      {% if section.settings.subheading != blank %}
-        <span class="hosen-faq__subheading">{{ section.settings.subheading }}</span>
-      {% endif %}
-      
-      {% if section.settings.heading != blank %}
-        <h2 class="hosen-faq__title {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
-      {% endif %}
-    </div>
-    
+  <div class="hosen-faq__container page-width">  
     <!-- Accordion -->
     <div class="hosen-faq__accordion">
       {% for block in section.blocks %}

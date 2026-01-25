@@ -12,11 +12,6 @@
   padding: 0 1.5rem;
 }
 
-@media screen and (min-width: 750px) {
-  .hosen-heading__container {
-    padding: 0 3rem;
-  }
-}
 
 .hosen-heading__content {
   display: flex;
@@ -66,10 +61,6 @@
   color: rgb(var(--color-foreground));
 }
 
-.hosen-heading__title.h0 {
-  font-size: 2.4rem;
-}
-
 .hosen-heading__title.h1 {
   font-size: 2rem;
 }
@@ -83,20 +74,16 @@
 }
 
 @media screen and (min-width: 750px) {
-  .hosen-heading__title.h0 {
-    font-size: 3.5rem;
-  }
-
   .hosen-heading__title.h1 {
-    font-size: 2.8rem;
+    font-size: 3.6rem;
   }
 
   .hosen-heading__title.h2 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
   .hosen-heading__title.h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 

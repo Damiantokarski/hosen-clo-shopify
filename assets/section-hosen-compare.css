@@ -26,8 +26,8 @@
 
 @media screen and (min-width: 990px) {
   .hosen-compare__grid {
-    grid-template-columns: 1.8fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
     align-items: start;
   }
 }
@@ -138,24 +138,39 @@
 
 /* Product Card */
 .hosen-compare__product {
-  width: 100%;
+  position: relative;
+}
+
+.hosen-compare__slider {
+  position: relative;
+  display: grid;
+}
+
+.hosen-compare__slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  pointer-events: none;
+}
+
+.hosen-compare__slide--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .hosen-compare__card {
-  display: block;
   text-decoration: none;
   color: inherit;
-}
-
-.hosen-compare__card--placeholder {
-  pointer-events: none;
+  display: block;
 }
 
 .hosen-compare__product-image-wrapper {
   position: relative;
   overflow: hidden;
   background-color: #f5f5f5;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 9/10;
 }
 
 .hosen-compare__product-image {
@@ -178,6 +193,21 @@
 
 .hosen-compare__card:hover .hosen-compare__product-image--secondary {
   opacity: 1;
+}
+
+.hosen-compare__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.hosen-compare__placeholder .placeholder-svg {
+  width: 60%;
+  max-width: 200px;
+  opacity: 0.5;
 }
 
 /* Quick View Button */

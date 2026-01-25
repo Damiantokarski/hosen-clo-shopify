@@ -85,6 +85,17 @@
                       </div>
                     </div>
                     
+                    <div class="hosen-hotspot__quick-view">
+                      <span class="hosen-hotspot__quick-view-text">QUICK VIEW</span>
+                      <span class="hosen-hotspot__quick-view-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="7" y1="17" x2="17" y2="7"></line>
+                          <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                      </span>
+                    </div>
+                    </div>
+                    
                     <div class="hosen-hotspot__info">
                       {% if section.settings.show_vendor and product.vendor != blank %}
                         <span class="hosen-hotspot__vendor">{{ product.vendor }}</span>
@@ -95,7 +106,7 @@
                           <span class="hosen-hotspot__price--sale">{{ product.price | money }}</span>
                           <span class="hosen-hotspot__price--compare">{{ product.compare_at_price | money }}</span>
                         {% else %}
-                          <span>{{ product.price | money }}</span>
+                          <span class="hosen-hotspot__price--regular">{{ product.price | money }}</span>
                         {% endif %}
                       </div>
                     </div>
@@ -110,7 +121,9 @@
                     <div class="hosen-hotspot__info">
                       <span class="hosen-hotspot__vendor">Brand Name</span>
                       <h3 class="hosen-hotspot__product-title">Product Title</h3>
-                      <div class="hosen-hotspot__price">0,00 zł</div>
+                      <div class="hosen-hotspot__price">
+                        <span class="hosen-hotspot__price--regular">0,00 zł</span>
+                      </div>
                     </div>
                   </div>
                 {% endif %}

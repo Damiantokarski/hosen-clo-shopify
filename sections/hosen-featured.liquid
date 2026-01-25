@@ -50,49 +50,50 @@
                       width="{{ product.featured_image.width }}"
                       height="{{ product.featured_image.height }}"
                     >
-                  {% endif %}
-                  {% if product.images[1] != blank %}
-                    <img 
-                      src="{{ product.images[1] | image_url: width: 600 }}"
-                      srcset="{{ product.images[1] | image_url: width: 300 }} 300w,
-                              {{ product.images[1] | image_url: width: 450 }} 450w,
-                              {{ product.images[1] | image_url: width: 600 }} 600w"
-                      sizes="(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw"
-                      alt="{{ product.images[1].alt | default: product.title }}"
-                      loading="lazy"
-                      class="hosen-featured__image hosen-featured__image--secondary"
-                      width="{{ product.images[1].width }}"
-                      height="{{ product.images[1].height }}"
-                    >
-                  {% endif %}
-                </div>
-                
-                <!-- Color Swatches -->
-                {% if section.settings.show_swatches and product.variants.size > 1 %}
-                  {% assign color_option = product.options_by_name['Color'] | default: product.options_by_name['Colour'] %}
-                  {% if color_option != blank %}
-                    <div class="hosen-featured__swatches">
-                      {% for value in color_option.values limit: 4 %}
-                        <span class="hosen-featured__swatch" style="background-color: {{ value | handleize }};"></span>
-                      {% endfor %}
-                      {% if color_option.values.size > 4 %}
-                        <span class="hosen-featured__swatch-more">+{{ color_option.values.size | minus: 4 }}</span>
-                      {% endif %}
+                    {% if product.images[1] != blank %}
+                      <img 
+                        src="{{ product.images[1] | image_url: width: 600 }}"
+                        srcset="{{ product.images[1] | image_url: width: 300 }} 300w,
+                                {{ product.images[1] | image_url: width: 450 }} 450w,
+                                {{ product.images[1] | image_url: width: 600 }} 600w"
+                        sizes="(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw"
+                        alt="{{ product.images[1].alt | default: product.title }}"
+                        loading="lazy"
+                        class="hosen-featured__image hosen-featured__image--secondary"
+                        width="{{ product.images[1].width }}"
+                        height="{{ product.images[1].height }}"
+                      >
+                    {% endif %}
+                  {% else %}
+                    <div class="hosen-featured__placeholder">
+                      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
                     </div>
                   {% endif %}
-                {% endif %}
+                  
+                  <div class="hosen-featured__quick-view">
+                    <span class="hosen-featured__quick-view-text">QUICK VIEW</span>
+                    <span class="hosen-featured__quick-view-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
                 
-                <div class="hosen-featured__info">
-                  {% if section.settings.show_vendor and product.vendor != blank %}
+                <div class="hosen-featured__product-info">
+                  {% if product.vendor != blank and section.settings.show_vendor %}
                     <span class="hosen-featured__vendor">{{ product.vendor }}</span>
                   {% endif %}
-                  <h3 class="hosen-featured__product-title">{{ product.title }}</h3>
+                  
+                  <h3 class="hosen-featured__title">{{ product.title }}</h3>
+                  
                   <div class="hosen-featured__price">
-                    {% if product.compare_at_price > product.price %}
+                    {% if product.featured_at_price > product.price %}
                       <span class="hosen-featured__price--sale">{{ product.price | money }}</span>
-                      <span class="hosen-featured__price--compare">{{ product.compare_at_price | money }}</span>
+                      <span class="hosen-featured__price--featured">{{ product.featured_at_price | money }}</span>
                     {% else %}
-                      <span>{{ product.price | money }}</span>
+                      <span class="hosen-featured__price--regular">{{ product.price | money }}</span>
                     {% endif %}
                   </div>
                 </div>
@@ -107,7 +108,9 @@
                 <div class="hosen-featured__info">
                   <span class="hosen-featured__vendor">Brand Name</span>
                   <h3 class="hosen-featured__product-title">Product Title</h3>
-                  <div class="hosen-featured__price">0,00 zł</div>
+                  <div class="hosen-featured__price">
+                    <span class="hosen-featured__price--regular">0,00 zł</span>
+                  </div>
                 </div>
               </div>
             {% endif %}
