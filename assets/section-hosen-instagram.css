@@ -1,12 +1,12 @@
 .hosen-instagram {
-  padding-top: var(--padding-top);
-  padding-bottom: var(--padding-bottom);
+  padding-top: var(--padding-top,60px);
+  padding-bottom: var(--padding-bottom,60px);
 }
 
 .hosen-instagram__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 3rem;
 }
 
 /* Grid */
@@ -20,7 +20,6 @@
   position: relative;
   aspect-ratio: 1/1;
   overflow: hidden;
-  border-radius: 8px;
   background-color: #f5f5f5;
 }
 
@@ -110,7 +109,5 @@
     gap: 0.75rem;
   }
 
-  .hosen-instagram__item {
-    border-radius: 4px;
-  }
+  
 }

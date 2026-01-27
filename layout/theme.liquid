@@ -50,7 +50,7 @@
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'hosen-darkmode.js' | asset_url }}" defer="defer"></script>
 
-    {{ 'hosen-darkmode.css' | asset_url | stylesheet_tag }}
+    {{ 'hosen-base.css' | asset_url | stylesheet_tag }}
 
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
@@ -313,6 +313,9 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <!-- Dark Mode CSS - must be last to override theme colors -->
+    {{ 'hosen-darkmode.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

@@ -1,17 +1,17 @@
 .hosen-featured {
-  padding-top: var(--padding-top);
-  padding-bottom: var(--padding-bottom);
+  padding-top: var(--padding-top, 60px);
+  padding-bottom: var(--padding-bottom, 60px);
 }
 
 .hosen-featured__container {
-  max-width: 1200px;
+  max-width: var(--hosen-container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--hosen-container-padding-mobile);
 }
 
 @media screen and (min-width: 749px) {
   .hosen-featured__container {
-    padding: 0 3rem;
+    padding: 0 var(--hosen-container-padding-desktop);
   }
 }
 
@@ -163,7 +163,7 @@
   position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: var(--hosen-placeholder-bg);
   
 }
 
@@ -291,7 +291,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #c9a227;
+  color: var(--hosen-vendor-color);
   margin-bottom: 0.5rem;
 }
 
@@ -327,7 +327,7 @@
 }
 
 .hosen-featured__price--sale {
-  color: #c00;
+  color: var(--hosen-sale-color);
 }
 
 .hosen-featured__price--compare {

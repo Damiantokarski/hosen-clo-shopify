@@ -1,19 +1,19 @@
 /* Hosen Products Section */
 .hosen-products {
-  padding-top: var(--padding-top, 20px);
+  padding-top: var(--padding-top, 60px);
   padding-bottom: var(--padding-bottom, 60px);
   overflow-x: hidden;
 }
 
 .hosen-products__container {
-  max-width: 1200px;
+  max-width: var(--hosen-container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--hosen-container-padding-mobile);
 }
 
 @media screen and (min-width: 750px) {
   .hosen-products__container {
-    padding: 0 3rem;
+    padding: 0 var(--hosen-container-padding-desktop);
   }
 }
 
@@ -49,7 +49,7 @@
 .hosen-products__image-wrapper {
   position: relative;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: var(--hosen-placeholder-bg);
   aspect-ratio: 3 / 4;
 }
 
@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: var(--hosen-placeholder-bg);
 }
 
 .hosen-products__placeholder .placeholder-svg {
@@ -102,14 +102,14 @@
   justify-content: center;
   gap: 0.8rem;
   padding: 1.4rem 2rem;
-  background-color: rgba(30, 30, 30, 0.95);
+  background-color: var(--hosen-quick-view-bg);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transform: translateY(100%);
-  transition: transform 0.3s cubic-bezier(0.45, 0, 0.15, 1);
+  transition: transform 0.3s var(--hosen-transition-ease);
 }
 
 .hosen-products__card:hover .hosen-products__quick-view {
@@ -131,16 +131,7 @@
 }
 
 .hosen-products__card:hover .hosen-products__quick-view-icon {
-  animation: hosen-quick-view-arrow 0.6s ease-in-out infinite;
-}
-
-@keyframes hosen-quick-view-arrow {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(3px, -3px);
-  }
+  animation: hosen-arrow-bounce 0.6s ease-in-out infinite;
 }
 
 /* Product Info */
@@ -177,7 +168,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #c9a227;
+  color: var(--hosen-vendor-color);
   margin-bottom: 0.5rem;
 }
 
@@ -213,7 +204,7 @@
 }
 
 .hosen-products__price--sale {
-  color: #c00;
+  color: var(--hosen-sale-color);
 }
 
 .hosen-products__price--compare {
