@@ -11,77 +11,77 @@ html.darkmode .color-scheme-4,
 html.darkmode .color-scheme-5,
 html.darkmode [class*="color-"],
 html.darkmode .gradient {
-  --color-background: 32, 32, 32 !important;
-  --color-foreground: 220, 220, 220 !important;
-  --color-background-contrast: 45, 45, 45 !important;
-  --color-shadow: 0, 0, 0 !important;
-  --color-button: 220, 220, 220 !important;
-  --color-button-text: 32, 32, 32 !important;
-  --color-secondary-button: 45, 45, 45 !important;
-  --color-secondary-button-text: 220, 220, 220 !important;
-  --color-link: 220, 220, 220 !important;
-  --color-badge-foreground: 220, 220, 220 !important;
-  --color-badge-background: 32, 32, 32 !important;
-  --color-badge-border: 220, 220, 220 !important;
-  --gradient-background: #202020 !important;
-  --payment-terms-background-color: rgb(32, 32, 32) !important;
+	--color-background: 32, 32, 32 !important;
+	--color-foreground: 220, 220, 220 !important;
+	--color-background-contrast: 45, 45, 45 !important;
+	--color-shadow: 0, 0, 0 !important;
+	--color-button: 220, 220, 220 !important;
+	--color-button-text: 32, 32, 32 !important;
+	--color-secondary-button: 45, 45, 45 !important;
+	--color-secondary-button-text: 220, 220, 220 !important;
+	--color-link: 220, 220, 220 !important;
+	--color-badge-foreground: 220, 220, 220 !important;
+	--color-badge-background: 32, 32, 32 !important;
+	--color-badge-border: 220, 220, 220 !important;
+	--gradient-background: #202020 !important;
+	--payment-terms-background-color: rgb(32, 32, 32) !important;
 }
 
 html.darkmode body {
-  color: rgba(220, 220, 220, 0.9) !important;
-  background-color: rgb(32, 32, 32) !important;
+	color: rgba(220, 220, 220, 0.9) !important;
+	background-color: rgb(32, 32, 32) !important;
 }
 
 /* Gradient backgrounds override */
 html.darkmode .gradient {
-  background: rgb(32, 32, 32) !important;
+	background: rgb(32, 32, 32) !important;
 }
 
 /* Header dark mode - stays darker */
 html.darkmode .header-wrapper,
 html.darkmode .section-header,
 html.darkmode header.header {
-  background-color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 html.darkmode .header__icon,
 html.darkmode .header__menu-item,
 html.darkmode .header a,
 html.darkmode .menu-drawer a {
-  color: rgba(220, 220, 220, 0.9) !important;
+	color: rgba(220, 220, 220, 0.9) !important;
 }
 
 /* Menu drawer dark mode */
 html.darkmode .menu-drawer,
 html.darkmode .menu-drawer__inner-container {
-  background-color: rgb(18, 18, 18) !important;
+	background-color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .menu-drawer__menu-item,
 html.darkmode .menu-drawer__close-button {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Cart drawer dark mode */
 html.darkmode .cart-drawer,
 html.darkmode .drawer {
-  background-color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 html.darkmode .cart-drawer__overlay {
-  background-color: rgba(0, 0, 0, 0.6) !important;
+	background-color: rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Announcement bar */
 html.darkmode .announcement-bar {
-  background-color: rgb(38, 38, 38) !important;
+	background-color: rgb(38, 38, 38) !important;
 }
 
 html.darkmode .announcement-bar__link,
 html.darkmode .announcement-bar__message {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* General text and links */
@@ -95,68 +95,68 @@ html.darkmode .h0,
 html.darkmode .h1,
 html.darkmode .h2,
 html.darkmode .h3 {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode p,
 html.darkmode span,
 html.darkmode li {
-  color: rgba(220, 220, 220, 0.85);
+	color: rgba(220, 220, 220, 0.85);
 }
 
 html.darkmode a {
-  color: rgba(220, 220, 220, 0.9);
+	color: rgba(220, 220, 220, 0.9);
 }
 
 /* Buttons */
 html.darkmode .button,
 html.darkmode .shopify-challenge__button,
 html.darkmode button[type="submit"] {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
-  border-color: rgb(220, 220, 220) !important;
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
+	border-color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .button:hover {
-  background-color: rgba(220, 220, 220, 0.9) !important;
+	background-color: rgba(220, 220, 220, 0.9) !important;
 }
 
 html.darkmode .button--secondary {
-  background-color: transparent !important;
-  color: rgb(220, 220, 220) !important;
-  border-color: rgba(220, 220, 220, 0.3) !important;
+	background-color: transparent !important;
+	color: rgb(220, 220, 220) !important;
+	border-color: rgba(220, 220, 220, 0.3) !important;
 }
 
 /* Inputs and forms */
 html.darkmode input,
 html.darkmode textarea,
 html.darkmode select {
-  background-color: rgba(220, 220, 220, 0.05) !important;
-  border-color: rgba(220, 220, 220, 0.2) !important;
-  color: rgb(220, 220, 220) !important;
+	background-color: rgba(220, 220, 220, 0.05) !important;
+	border-color: rgba(220, 220, 220, 0.2) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode input::placeholder,
 html.darkmode textarea::placeholder {
-  color: rgba(220, 220, 220, 0.5) !important;
+	color: rgba(220, 220, 220, 0.5) !important;
 }
 
 html.darkmode .field__input,
 html.darkmode .select__select {
-  background-color: rgba(220, 220, 220, 0.05) !important;
-  border-color: rgba(220, 220, 220, 0.2) !important;
-  color: rgb(220, 220, 220) !important;
+	background-color: rgba(220, 220, 220, 0.05) !important;
+	border-color: rgba(220, 220, 220, 0.2) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Cards and sections */
 html.darkmode .card,
 html.darkmode .card-wrapper {
-  background-color: rgb(18, 18, 18) !important;
+	background-color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode section,
 html.darkmode .shopify-section {
-  background-color: rgb(18, 18, 18);
+	background-color: rgb(18, 18, 18);
 }
 
 /* Product cards */
@@ -165,414 +165,457 @@ html.darkmode .card__heading a,
 html.darkmode .card-information__text,
 html.darkmode .price,
 html.darkmode .price-item {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .card__inner {
-  background-color: rgb(40, 40, 40) !important;
+	background-color: rgb(40, 40, 40) !important;
 }
 
 /* Footer - stays darker */
 html.darkmode .footer,
 html.darkmode footer {
-  background-color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 html.darkmode .footer__content-top,
 html.darkmode .footer__content-bottom {
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 /* Borders and dividers */
 html.darkmode hr,
 html.darkmode .divider {
-  border-color: rgba(220, 220, 220, 0.1) !important;
-  background-color: rgba(220, 220, 220, 0.1) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 /* Scrollbar */
 html.darkmode ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+	width: 8px;
+	height: 8px;
 }
 
 html.darkmode ::-webkit-scrollbar-track {
-  background: rgb(40, 40, 40);
+	background: rgb(40, 40, 40);
 }
 
 html.darkmode ::-webkit-scrollbar-thumb {
-  background: rgb(70, 70, 70);
-  border-radius: 4px;
+	background: rgb(70, 70, 70);
+	border-radius: 4px;
 }
 
 html.darkmode ::-webkit-scrollbar-thumb:hover {
-  background: rgb(90, 90, 90);
+	background: rgb(90, 90, 90);
 }
 
 /* Dark Mode Toggle Button */
 .header__icon--darkmode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.8rem;
-  color: rgb(var(--color-foreground));
-  transition: color 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.8rem;
+	color: rgb(var(--color-foreground));
+	transition: color 0.3s ease;
 }
 
 .header__icon--darkmode:hover {
-  color: rgb(var(--color-foreground), 0.75);
+	color: rgb(var(--color-foreground), 0.75);
 }
 
 .darkmode-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Light mode: show moon (--dark class), hide sun (--light class) */
+.darkmode-icon--light {
+	display: none;
 }
 
 .darkmode-icon--dark {
-  display: none;
+	display: flex;
 }
 
-/* Dark mode icon visibility */
+/* Dark mode: show sun (--light class), hide moon (--dark class) */
 html.darkmode .darkmode-icon--light {
-  display: none;
+	display: flex;
 }
 
 html.darkmode .darkmode-icon--dark {
-  display: flex;
+	display: none;
 }
-
-/* ===========================================
-   HOSEN SECTIONS - DARK MODE STYLES
-   =========================================== */
 
 /* -----------------------------------------
    Global Hosen Buttons - Dark Mode
    ----------------------------------------- */
-html.darkmode [class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(.hosen-compare__slider-button):not(.hosen-carousel__nav-button):not([class*="__button-icon"]) {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.5) !important;
+html.darkmode
+	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
+		.hosen-compare__slider-button
+	):not(.hosen-carousel__nav-button):not([class*="__button-icon"]) {
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.5) !important;
 }
 
-html.darkmode [class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(.hosen-compare__slider-button):not(.hosen-carousel__nav-button):not([class*="__button-icon"]) span,
-html.darkmode [class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(.hosen-compare__slider-button):not(.hosen-carousel__nav-button):not([class*="__button-icon"]) .button-text {
-  color: rgb(18, 18, 18) !important;
-  background: none !important;
-  background-color: transparent !important;
+html.darkmode
+	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
+		.hosen-compare__slider-button
+	):not(.hosen-carousel__nav-button):not([class*="__button-icon"])
+	span,
+html.darkmode
+	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
+		.hosen-compare__slider-button
+	):not(.hosen-carousel__nav-button):not([class*="__button-icon"])
+	.button-text {
+	color: rgb(18, 18, 18) !important;
+	background: none !important;
+	background-color: transparent !important;
 }
 
-html.darkmode [class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(.hosen-compare__slider-button):not(.hosen-carousel__nav-button):not([class*="__button-icon"]):hover {
-  background-color: rgba(220, 220, 220, 0.9) !important;
-  color: rgb(18, 18, 18) !important;
+html.darkmode
+	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
+		.hosen-compare__slider-button
+	):not(.hosen-carousel__nav-button):not([class*="__button-icon"]):hover {
+	background-color: rgba(220, 220, 220, 0.9) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode [class*="hosen-"][class*="__button-icon"],
 html.darkmode [class*="hosen-"][class*="__button-icon"] svg {
-  background-color: transparent !important;
-  background: transparent !important;
-  color: rgb(18, 18, 18) !important;
-  stroke: rgb(18, 18, 18) !important;
+	background-color: transparent !important;
+	background: transparent !important;
+	color: rgb(18, 18, 18) !important;
+	stroke: rgb(18, 18, 18) !important;
 }
 
 /* -----------------------------------------
    Hosen Footer - Dark Mode (stays darker)
    ----------------------------------------- */
 html.darkmode .hosen-footer {
-  background-color: rgb(18, 18, 18) !important;
-  border-top-color: rgba(var(--color-foreground), 0.15);
+	background-color: rgb(18, 18, 18) !important;
+	border-top-color: rgba(var(--color-foreground), 0.15);
 }
 
 html.darkmode .hosen-footer__brand {
-  border-right-color: rgba(var(--color-foreground), 0.15);
+	border-right-color: rgba(var(--color-foreground), 0.15);
 }
 
 html.darkmode .hosen-footer__brand-name,
 html.darkmode .hosen-footer__column-title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-footer__brand-description,
 html.darkmode .hosen-footer__menu-link,
 html.darkmode .hosen-footer__social-link {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-footer__newsletter-field {
-  background-color: rgba(var(--color-foreground), 0.05);
-  border-color: rgba(var(--color-foreground), 0.2);
+	background-color: rgba(var(--color-foreground), 0.05);
+	border-color: rgba(var(--color-foreground), 0.2);
 }
 
 html.darkmode .hosen-footer__newsletter-input {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-footer__newsletter-input::placeholder {
-  color: rgba(var(--color-foreground), 0.5);
+	color: rgba(var(--color-foreground), 0.5);
 }
 
 html.darkmode .hosen-footer__newsletter-button {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.3) !important;
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.3) !important;
 }
 
 html.darkmode .hosen-footer__newsletter-button span,
 html.darkmode .hosen-footer__newsletter-button-text {
-  color: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-footer__newsletter-button:hover {
-  background-color: rgba(220, 220, 220, 0.9) !important;
-  color: rgb(18, 18, 18) !important;
+	background-color: rgba(220, 220, 220, 0.9) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-footer__newsletter-button-icon,
 html.darkmode .hosen-footer__newsletter-button-icon svg {
-  color: rgb(18, 18, 18) !important;
-  stroke: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
+	stroke: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-footer__bottom {
-  border-top-color: rgba(var(--color-foreground), 0.15);
+	border-top-color: rgba(var(--color-foreground), 0.15);
 }
 
 html.darkmode .hosen-footer__copyright,
 html.darkmode .hosen-footer__legal-link {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 /* -----------------------------------------
    Hosen FAQ - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-faq__item {
-  border-bottom-color: rgba(var(--color-foreground), 0.15);
+	border-bottom-color: rgba(var(--color-foreground), 0.15);
 }
 
 html.darkmode .hosen-faq__question-text {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-faq__icon svg {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-faq__answer-inner {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 /* -----------------------------------------
    Hosen Countdown - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-countdown__timer {
-  border-color: rgba(var(--color-foreground), 0.3);
-  background-color: rgba(var(--color-background), 0.3);
+	border-color: rgba(var(--color-foreground), 0.3);
+	background-color: rgba(var(--color-background), 0.3);
 }
 
 html.darkmode .hosen-countdown__separator {
-  background-color: rgba(var(--color-foreground), 0.3);
+	background-color: rgba(var(--color-foreground), 0.3);
 }
 
 html.darkmode .hosen-countdown__button {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.5) !important;
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.5) !important;
 }
 
 html.darkmode .hosen-countdown__button span,
 html.darkmode .hosen-countdown__button-text {
-  color: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-countdown__button:hover {
-  background-color: rgba(220, 220, 220, 0.9) !important;
-  color: rgb(18, 18, 18) !important;
+	background-color: rgba(220, 220, 220, 0.9) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-countdown__button-icon,
 html.darkmode .hosen-countdown__button-icon svg {
-  color: rgb(18, 18, 18) !important;
-  stroke: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
+	stroke: rgb(18, 18, 18) !important;
 }
 
 /* -----------------------------------------
    Hosen Compare - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-compare__slider-line {
-  background-color: rgb(var(--color-foreground));
+	background-color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-compare__slider-button {
-  background-color: rgb(var(--color-background));
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	background-color: rgb(var(--color-background));
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 html.darkmode .hosen-compare__slider-button svg {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-compare__product-title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-compare__product-price {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-compare__label {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 /* -----------------------------------------
    Hosen Carousel - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-carousel__placeholder {
-  background-color: rgba(var(--color-foreground), 0.1);
+	background-color: rgba(var(--color-foreground), 0.1);
 }
 
 html.darkmode .hosen-carousel__nav-button {
-  background-color: rgba(var(--color-background), 0.8);
-  border-color: rgba(var(--color-foreground), 0.2);
+	background-color: rgba(var(--color-background), 0.8);
+	border-color: rgba(var(--color-foreground), 0.2);
 }
 
 html.darkmode .hosen-carousel__nav-button:hover {
-  background-color: rgb(var(--color-background));
+	background-color: rgb(var(--color-background));
 }
 
 html.darkmode .hosen-carousel__nav-button svg {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-carousel__dot {
-  background-color: rgba(var(--color-foreground), 0.4);
+	background-color: rgba(var(--color-foreground), 0.4);
 }
 
 html.darkmode .hosen-carousel__dot--active {
-  background-color: rgb(var(--color-foreground));
+	background-color: rgb(var(--color-foreground));
 }
 
 /* -----------------------------------------
    Hosen About - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-about__subheading {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-about__tab {
-  color: rgba(var(--color-foreground), 0.25);
+	color: rgba(var(--color-foreground), 0.25);
 }
 
 html.darkmode .hosen-about__tab:hover {
-  color: rgba(var(--color-foreground), 0.5);
+	color: rgba(var(--color-foreground), 0.5);
 }
 
 html.darkmode .hosen-about__tab--active {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-about__description {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-about__button {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.5) !important;
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.5) !important;
 }
 
 html.darkmode .hosen-about__button span,
 html.darkmode .hosen-about__button-text {
-  color: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-about__button:hover {
-  background-color: rgba(220, 220, 220, 0.9) !important;
-  color: rgb(18, 18, 18) !important;
+	background-color: rgba(220, 220, 220, 0.9) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-about__button-icon,
 html.darkmode .hosen-about__button-icon svg {
-  color: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 /* -----------------------------------------
    Hosen Featured - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-featured__subheading {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-featured__title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-featured__description {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-featured__button {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.5) !important;
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.5) !important;
 }
 
 html.darkmode .hosen-featured__button span,
 html.darkmode .hosen-featured__button-text {
-  color: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-featured__button:hover {
-  background-color: rgba(220, 220, 220, 0.9) !important;
-  color: rgb(18, 18, 18) !important;
+	background-color: rgba(220, 220, 220, 0.9) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-featured__button-icon,
 html.darkmode .hosen-featured__button-icon svg {
-  color: rgb(18, 18, 18) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 html.darkmode .hosen-featured__placeholder {
-  background-color: rgba(var(--color-foreground), 0.1);
+	background-color: rgba(var(--color-foreground), 0.1);
 }
 
 html.darkmode .hosen-featured__product-vendor {
-  color: rgba(var(--color-foreground), 0.6);
+	color: rgba(var(--color-foreground), 0.6);
 }
 
 html.darkmode .hosen-featured__product-title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-featured__product-price {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-featured__quick-view {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+	background-color: rgb(var(--color-foreground));
+	color: rgb(var(--color-background));
 }
 
 /* -----------------------------------------
    Hosen Heading - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-heading {
-  border-bottom-color: rgba(var(--color-foreground), 0.15);
+	border-bottom-color: rgba(var(--color-foreground), 0.15);
 }
 
 html.darkmode .hosen-heading__subheading {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-heading__title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-heading__link {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
+}
+
+/* -----------------------------------------
+   Hosen Collection Header - Dark Mode
+   ----------------------------------------- */
+html.darkmode .hosen-collection-header__breadcrumbs a {
+	color: rgb(var(--color-foreground));
+}
+
+html.darkmode .hosen-collection-header__breadcrumb-current {
+	color: rgba(var(--color-foreground), 0.5);
+}
+
+html.darkmode .hosen-collection-header__title {
+	color: rgb(var(--color-foreground));
+}
+
+html.darkmode .hosen-collection-header__tag {
+	color: rgba(var(--color-foreground), 0.6);
+}
+
+html.darkmode .hosen-collection-header__tag:hover,
+html.darkmode .hosen-collection-header__tag--active {
+	color: rgb(var(--color-foreground));
+}
+
+html.darkmode .hosen-collection-header__link {
+	color: rgb(var(--color-foreground));
 }
 
 /* -----------------------------------------
@@ -580,90 +623,90 @@ html.darkmode .hosen-heading__link {
    ----------------------------------------- */
 html.darkmode .hosen-hotspot__placeholder,
 html.darkmode .hosen-hotspot__placeholder-product {
-  background-color: rgba(var(--color-foreground), 0.1);
+	background-color: rgba(var(--color-foreground), 0.1);
 }
 
 html.darkmode .hosen-hotspot__arrow {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-hotspot__product-title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-hotspot__product-price {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-hotspot__product-vendor {
-  color: rgba(var(--color-foreground), 0.6);
+	color: rgba(var(--color-foreground), 0.6);
 }
 
 html.darkmode .hosen-hotspot__dots-dot {
-  background-color: rgba(var(--color-foreground), 0.3);
+	background-color: rgba(var(--color-foreground), 0.3);
 }
 
 html.darkmode .hosen-hotspot__dots-dot--active {
-  background-color: rgb(var(--color-foreground));
+	background-color: rgb(var(--color-foreground));
 }
 
 /* -----------------------------------------
    Hosen Instagram - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-instagram__item {
-  background-color: rgba(var(--color-foreground), 0.1);
+	background-color: rgba(var(--color-foreground), 0.1);
 }
 
 html.darkmode .hosen-instagram__placeholder {
-  background-color: rgba(var(--color-foreground), 0.1);
+	background-color: rgba(var(--color-foreground), 0.1);
 }
 
 html.darkmode .hosen-instagram__placeholder .placeholder-svg {
-  fill: rgba(var(--color-foreground), 0.3);
+	fill: rgba(var(--color-foreground), 0.3);
 }
 
 /* -----------------------------------------
    Hosen Products - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-products__placeholder {
-  background-color: rgba(var(--color-foreground), 0.1);
+	background-color: rgba(var(--color-foreground), 0.1);
 }
 
 html.darkmode .hosen-products__vendor {
-  color: rgba(var(--color-foreground), 0.6);
+	color: rgba(var(--color-foreground), 0.6);
 }
 
 html.darkmode .hosen-products__title {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-products__price--regular,
 html.darkmode .hosen-products__price--sale {
-  color: rgb(var(--color-foreground));
+	color: rgb(var(--color-foreground));
 }
 
 html.darkmode .hosen-products__price--compare {
-  color: rgba(var(--color-foreground), 0.5);
+	color: rgba(var(--color-foreground), 0.5);
 }
 
 html.darkmode .hosen-products__quick-view {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+	background-color: rgb(var(--color-foreground));
+	color: rgb(var(--color-background));
 }
 
 html.darkmode .hosen-products__swatch {
-  border-color: rgba(var(--color-foreground), 0.2);
+	border-color: rgba(var(--color-foreground), 0.2);
 }
 
 html.darkmode .hosen-products__swatch-more {
-  color: rgba(var(--color-foreground), 0.6);
+	color: rgba(var(--color-foreground), 0.6);
 }
 
 /* -----------------------------------------
    Hosen Separator - Dark Mode
    ----------------------------------------- */
 html.darkmode .hosen-separator__container {
-  background-color: rgba(var(--color-foreground), 0.15);
+	background-color: rgba(var(--color-foreground), 0.15);
 }
 
 /* ===========================================
@@ -674,25 +717,25 @@ html.darkmode .hosen-separator__container {
 html.darkmode .rich-text__text,
 html.darkmode .rich-text__heading,
 html.darkmode .rich-text__caption {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Collection pages */
 html.darkmode .collection-hero__title,
 html.darkmode .collection-hero__description {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Image banners */
 html.darkmode .banner__content {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Facets / Filters */
 html.darkmode .facets__wrapper,
 html.darkmode .facets-container {
-  background-color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 html.darkmode .facet-checkbox__text,
@@ -700,35 +743,35 @@ html.darkmode .facets__heading,
 html.darkmode .facets__selected,
 html.darkmode .mobile-facets__heading,
 html.darkmode .active-facets__button {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .facets__disclosure,
 html.darkmode .mobile-facets__disclosure {
-  border-color: rgba(220, 220, 220, 0.15) !important;
+	border-color: rgba(220, 220, 220, 0.15) !important;
 }
 
 /* Product page */
 html.darkmode .product__title,
 html.darkmode .product__text,
 html.darkmode .product__description {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .product-form__input label,
 html.darkmode .variant-picker__label {
-  color: rgba(220, 220, 220, 0.85) !important;
+	color: rgba(220, 220, 220, 0.85) !important;
 }
 
 html.darkmode .product-form__input input[type="radio"] + label {
-  background-color: transparent !important;
-  border-color: rgba(220, 220, 220, 0.3) !important;
-  color: rgb(220, 220, 220) !important;
+	background-color: transparent !important;
+	border-color: rgba(220, 220, 220, 0.3) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .product-form__input input[type="radio"]:checked + label {
-  background-color: rgb(220, 220, 220) !important;
-  color: rgb(18, 18, 18) !important;
+	background-color: rgb(220, 220, 220) !important;
+	color: rgb(18, 18, 18) !important;
 }
 
 /* Cart page */
@@ -736,82 +779,82 @@ html.darkmode .cart-item__name,
 html.darkmode .cart-item__details,
 html.darkmode .cart__ctas,
 html.darkmode .totals__subtotal-value {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .cart-item {
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 /* Quantity selector */
 html.darkmode .quantity__button,
 html.darkmode .quantity__input {
-  background-color: transparent !important;
-  border-color: rgba(220, 220, 220, 0.2) !important;
-  color: rgb(220, 220, 220) !important;
+	background-color: transparent !important;
+	border-color: rgba(220, 220, 220, 0.2) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Predictive search */
 html.darkmode .predictive-search,
 html.darkmode .predictive-search__results {
-  background-color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 html.darkmode .predictive-search__item-heading,
 html.darkmode .predictive-search__heading {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Popup / Modal */
 html.darkmode .modal__content,
 html.darkmode .popup-modal__content,
 html.darkmode [id*="PopupModal"] .popup-modal__content-info {
-  background-color: rgb(18, 18, 18) !important;
-  color: rgb(220, 220, 220) !important;
+	background-color: rgb(18, 18, 18) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Quick add modal */
 html.darkmode .quick-add-modal__content-info {
-  background-color: rgb(18, 18, 18) !important;
+	background-color: rgb(18, 18, 18) !important;
 }
 
 /* Pagination */
 html.darkmode .pagination__item,
 html.darkmode .pagination__item--current {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Slideshow */
 html.darkmode .slideshow__text {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Newsletter */
 html.darkmode .newsletter-form__field-wrapper {
-  background-color: rgba(220, 220, 220, 0.05) !important;
-  border-color: rgba(220, 220, 220, 0.2) !important;
+	background-color: rgba(220, 220, 220, 0.05) !important;
+	border-color: rgba(220, 220, 220, 0.2) !important;
 }
 
 html.darkmode .newsletter-form__field {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Contact form */
 html.darkmode .contact__fields label,
 html.darkmode .form__label {
-  color: rgba(220, 220, 220, 0.85) !important;
+	color: rgba(220, 220, 220, 0.85) !important;
 }
 
 /* Blog */
 html.darkmode .article-card__title,
 html.darkmode .article-card__excerpt,
 html.darkmode .blog-articles__article {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .article-card {
-  background-color: rgb(18, 18, 18) !important;
+	background-color: rgb(18, 18, 18) !important;
 }
 
 /* Account pages */
@@ -821,79 +864,79 @@ html.darkmode .customer p,
 html.darkmode .customer td,
 html.darkmode .customer th,
 html.darkmode .customer label {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .customer table {
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 /* Breadcrumbs */
 html.darkmode .breadcrumbs__link,
 html.darkmode .breadcrumbs__text {
-  color: rgba(220, 220, 220, 0.7) !important;
+	color: rgba(220, 220, 220, 0.7) !important;
 }
 
 /* Tabs */
 html.darkmode .product__accordion,
 html.darkmode .accordion__content {
-  border-color: rgba(220, 220, 220, 0.15) !important;
+	border-color: rgba(220, 220, 220, 0.15) !important;
 }
 
 html.darkmode .accordion summary {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Icons */
 html.darkmode .icon,
 html.darkmode svg {
-  color: currentColor;
+	color: currentColor;
 }
 
 /* Links hover state */
 html.darkmode a:hover {
-  color: rgba(220, 220, 220, 0.7);
+	color: rgba(220, 220, 220, 0.7);
 }
 
 /* Mega menu */
 html.darkmode .mega-menu__content,
 html.darkmode .header__submenu {
-  background-color: rgb(18, 18, 18) !important;
-  border-color: rgba(220, 220, 220, 0.1) !important;
+	background-color: rgb(18, 18, 18) !important;
+	border-color: rgba(220, 220, 220, 0.1) !important;
 }
 
 html.darkmode .mega-menu__link,
 html.darkmode .header__menu-item {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 html.darkmode .mega-menu__link:hover,
 html.darkmode .header__menu-item:hover {
-  color: rgba(220, 220, 220, 0.7) !important;
+	color: rgba(220, 220, 220, 0.7) !important;
 }
 
 /* Badges */
 html.darkmode .badge {
-  background-color: rgb(38, 38, 38) !important;
-  color: rgb(220, 220, 220) !important;
-  border-color: rgba(220, 220, 220, 0.2) !important;
+	background-color: rgb(38, 38, 38) !important;
+	color: rgb(220, 220, 220) !important;
+	border-color: rgba(220, 220, 220, 0.2) !important;
 }
 
 /* Gift card */
 html.darkmode .gift-card__title,
 html.darkmode .gift-card__price {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* Password page */
 html.darkmode .password-content,
 html.darkmode .password-login {
-  background-color: rgb(18, 18, 18) !important;
-  color: rgb(220, 220, 220) !important;
+	background-color: rgb(18, 18, 18) !important;
+	color: rgb(220, 220, 220) !important;
 }
 
 /* 404 page */
 html.darkmode .shopify-section--404 h1,
 html.darkmode .shopify-section--404 p {
-  color: rgb(220, 220, 220) !important;
+	color: rgb(220, 220, 220) !important;
 }

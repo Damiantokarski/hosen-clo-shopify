@@ -35,11 +35,13 @@
     
     if (lightIcon && darkIcon) {
       if (isDark) {
-        lightIcon.style.display = 'none';
-        darkIcon.style.display = 'flex';
-      } else {
+        // Dark mode: show sun (lightIcon), hide moon (darkIcon)
         lightIcon.style.display = 'flex';
         darkIcon.style.display = 'none';
+      } else {
+        // Light mode: show moon (darkIcon), hide sun (lightIcon)
+        lightIcon.style.display = 'none';
+        darkIcon.style.display = 'flex';
       }
     }
   }

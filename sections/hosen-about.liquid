@@ -1,21 +1,23 @@
 {{ 'section-hosen-about.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'hosen-about.js' | asset_url }}" defer="defer"></script>
 
-<div class="hosen-about color-{{ section.settings.color_scheme }}" style="--padding-top: {{ section.settings.padding_top }}px; --padding-bottom: {{ section.settings.padding_bottom }}px;">
+<div
+  class="hosen-about color-{{ section.settings.color_scheme }}"
+  style="--padding-top: {{ section.settings.padding_top }}px; --padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
   <div class="hosen-about__container page-width">
     <div class="hosen-about__grid">
-      
       <!-- Left Content -->
       <div class="hosen-about__content">
         {% if section.settings.subheading != blank %}
           <span class="hosen-about__subheading">{{ section.settings.subheading }}</span>
         {% endif %}
-        
+
         <!-- Tab Buttons -->
         <div class="hosen-about__tabs">
           {% for block in section.blocks %}
-            <button 
-              class="hosen-about__tab {% if forloop.first %}hosen-about__tab--active{% endif %}" 
+            <button
+              class="hosen-about__tab {% if forloop.first %}hosen-about__tab--active{% endif %}"
               data-tab-index="{{ forloop.index0 }}"
               {{ block.shopify_attributes }}
             >
@@ -23,38 +25,55 @@
             </button>
           {% endfor %}
         </div>
-        
+
         <!-- Tab Descriptions -->
         <div class="hosen-about__descriptions">
           {% for block in section.blocks %}
-            <div class="hosen-about__description {% if forloop.first %}hosen-about__description--active{% endif %}" data-description-index="{{ forloop.index0 }}">
+            <div
+              class="hosen-about__description {% if forloop.first %}hosen-about__description--active{% endif %}"
+              data-description-index="{{ forloop.index0 }}"
+            >
               {{ block.settings.description }}
             </div>
           {% endfor %}
         </div>
-        
-         {% if section.settings.button_label != blank %}
+
+        {% if section.settings.button_label != blank %}
           <a href="{{ section.settings.button_link }}" class="hosen-about__button">
             <span>{{ section.settings.button_label }}</span>
-            <svg class="hosen-about__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              class="hosen-about__button-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </a>
         {% endif %}
       </div>
-      
+
       <!-- Right Image -->
       <div class="hosen-about__image-wrapper">
         <div class="hosen-about__images">
           {% for block in section.blocks %}
-            <div class="hosen-about__image-slide {% if forloop.first %}hosen-about__image-slide--active{% endif %}" data-image-index="{{ forloop.index0 }}">
+            <div
+              class="hosen-about__image-slide {% if forloop.first %}hosen-about__image-slide--active{% endif %}"
+              data-image-index="{{ forloop.index0 }}"
+            >
               {% if block.settings.image != blank %}
-                <img 
+                <img
                   src="{{ block.settings.image | image_url: width: 800 }}"
-                  srcset="{{ block.settings.image | image_url: width: 400 }} 400w,
-                          {{ block.settings.image | image_url: width: 600 }} 600w,
-                          {{ block.settings.image | image_url: width: 800 }} 800w"
+                  srcset="
+                    {{ block.settings.image | image_url: width: 400 }} 400w,
+                    {{ block.settings.image | image_url: width: 600 }} 600w,
+                    {{ block.settings.image | image_url: width: 800 }} 800w
+                  "
                   sizes="(min-width: 990px) 50vw, 100vw"
                   alt="{{ block.settings.image.alt | default: block.settings.tab_title }}"
                   loading="lazy"
@@ -69,7 +88,6 @@
           {% endfor %}
         </div>
       </div>
-      
     </div>
   </div>
 </div>
