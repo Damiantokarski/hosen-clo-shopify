@@ -19,12 +19,14 @@
         {% endif %}
         
         {% if section.settings.button_label != blank %}
-          <a href="{{ section.settings.button_link }}" class="hosen-featured__button">
+          <a href="{{ section.settings.button_link }}" class="hosen-button">
             <span>{{ section.settings.button_label }}</span>
-            <svg class="hosen-featured__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
+            <span class="hosen-button__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
           </a>
         {% endif %}
       </div>
@@ -207,6 +209,30 @@
       "step": 4,
       "unit": "px",
       "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Padding boczny"
+    },
+    {
+      "type": "range",
+      "id": "container_padding_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding boczny (mobile)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "container_padding_desktop",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding boczny (desktop)",
+      "default": 50
     }
   ],
   "blocks": [
@@ -235,3 +261,10 @@
   ]
 }
 {% endschema %}
+
+{% style %}
+  .hosen-featured {
+    --section-container-padding-mobile: {{ section.settings.container_padding_mobile }}px;
+    --section-container-padding-desktop: {{ section.settings.container_padding_desktop }}px;
+  }
+{% endstyle %}

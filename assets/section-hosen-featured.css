@@ -6,12 +6,12 @@
 .hosen-featured__container {
   max-width: var(--hosen-container-max-width);
   margin: 0 auto;
-  padding: 0 var(--hosen-container-padding-mobile);
+  padding: 0 var(--section-container-padding-mobile, var(--hosen-container-padding-mobile));
 }
 
-@media screen and (min-width: 749px) {
+@media screen and (min-width: 750px) {
   .hosen-featured__container {
-    padding: 0 var(--hosen-container-padding-desktop);
+    padding: 0 var(--section-container-padding-desktop, var(--hosen-container-padding-desktop));
   }
 }
 
@@ -73,71 +73,7 @@
   margin: 0;
 }
 
-/* Button */
-.hosen-featured__button {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.4rem 2.4rem;
-  background-color: rgb(0, 0, 0);
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  backdrop-filter: blur(4px);
-  max-width: fit-content;
-}
-
-@media screen and (min-width: 750px) {
-  .hosen-featured__button {
-    padding: 1.6rem 3rem;
-    font-size: 1.2rem;
-  }
-}
-
-.hosen-featured__button:hover {
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #fff;
-}
-
-.hosen-featured__button-text {
-  position: relative;
-  z-index: 1;
-}
-
-.hosen-featured__button-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  transition: transform 0.3s cubic-bezier(0.45, 0, 0.15, 1);
-}
-
-.hosen-featured__button-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.hosen-featured__button:hover .hosen-featured__button-icon {
-  transform: translate(3px, -3px);
-  animation: hosen-arrow-diagonal 0.6s ease-in-out infinite;
-}
-
-@keyframes hosen-arrow-diagonal {
-  0%, 100% {
-    transform: translate(3px, -3px);
-  }
-  50% {
-    transform: translate(6px, -6px);
-  }
-}
+/* Button - uses .hosen-button from hosen-base.css */
 
 /* Products Grid */
 .hosen-featured__products {
@@ -387,7 +323,11 @@
 }
 
 @media screen and (max-width: 749px) {
-  
+  .hosen-featured__content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
   .hosen-featured__title.h0 {
     font-size: 2.5rem;
   }
@@ -397,26 +337,22 @@
   }
 
   .hosen-featured__products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hosen-featured__product:nth-child(3) {
-    display: none;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
 @media screen and (max-width: 449px) {
   .hosen-featured__products {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .hosen-featured__product-title {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     margin-top: 0;
   }
 
   .hosen-featured__price {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 }

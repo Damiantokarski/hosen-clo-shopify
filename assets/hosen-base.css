@@ -1,34 +1,43 @@
 /* =====================================================
    HOSEN BASE CSS - Shared Components
-   Version: 1.0
+   Version: 2.0
    ===================================================== */
 
 /* -----------------------------------------------------
    1. CSS Custom Properties (Design Tokens)
    ----------------------------------------------------- */
 :root {
+  /* Container */
   --hosen-container-max-width: 1200px;
-  --hosen-container-padding-mobile: 1.5rem;
-  --hosen-container-padding-desktop: 3rem;
+  --hosen-container-padding-mobile: 30px;
+  --hosen-container-padding-desktop: 50px;
+  
+  /* Colors */
   --hosen-vendor-color: #c9a227;
   --hosen-sale-color: #c00;
   --hosen-quick-view-bg: rgba(30, 30, 30, 0.95);
   --hosen-placeholder-bg: #f5f5f5;
+  
+  /* Typography */
+  --hosen-font-heading: 'Oswald', sans-serif;
+  
+  /* Transitions */
   --hosen-transition-ease: cubic-bezier(0.45, 0, 0.15, 1);
+  --hosen-transition-default: 0.3s ease;
 }
 
 /* -----------------------------------------------------
    2. Container Base
    ----------------------------------------------------- */
 .hosen-container {
-  max-width: var(--hosen-container-max-width);
+  max-width: var(--section-container-max-width, var(--hosen-container-max-width));
   margin: 0 auto;
-  padding: 0 var(--hosen-container-padding-mobile);
+  padding: 0 var(--section-container-padding-mobile, var(--hosen-container-padding-mobile));
 }
 
 @media screen and (min-width: 750px) {
   .hosen-container {
-    padding: 0 var(--hosen-container-padding-desktop);
+    padding: 0 var(--section-container-padding-desktop, var(--hosen-container-padding-desktop));
   }
 }
 

@@ -4,9 +4,15 @@
 }
 
 .hosen-instagram__container {
-  max-width: 1200px;
+  max-width: var(--hosen-container-max-width);
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 var(--section-container-padding-mobile, var(--hosen-container-padding-mobile));
+}
+
+@media screen and (min-width: 750px) {
+  .hosen-instagram__container {
+    padding: 0 var(--section-container-padding-desktop, var(--hosen-container-padding-desktop));
+  }
 }
 
 /* Grid */
@@ -96,10 +102,6 @@
 }
 
 @media screen and (max-width: 749px) {
-  .hosen-instagram__container {
-    padding: 0 1rem;
-  }
-
   .hosen-instagram__header {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;

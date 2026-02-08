@@ -149,6 +149,30 @@
       "unit": "px",
       "label": "Dolny padding",
       "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Padding boczny"
+    },
+    {
+      "type": "range",
+      "id": "container_padding_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding boczny (mobile)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "container_padding_desktop",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding boczny (desktop)",
+      "default": 50
     }
   ],
   "blocks": [
@@ -187,5 +211,7 @@
   .section-hosen-products {
     --padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --section-container-padding-mobile: {{ section.settings.container_padding_mobile }}px;
+    --section-container-padding-desktop: {{ section.settings.container_padding_desktop }}px;
   }
 {% endstyle %}

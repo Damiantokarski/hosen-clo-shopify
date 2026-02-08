@@ -6,7 +6,13 @@
 .hosen-hotspot__container {
 	max-width: var(--hosen-container-max-width);
 	margin: 0 auto;
-	padding: 0 var(--hosen-container-padding-desktop);
+	padding: 0 var(--section-container-padding-mobile, var(--hosen-container-padding-mobile));
+}
+
+@media screen and (min-width: 750px) {
+	.hosen-hotspot__container {
+		padding: 0 var(--section-container-padding-desktop, var(--hosen-container-padding-desktop));
+	}
 }
 
 .hosen-hotspot__grid {
