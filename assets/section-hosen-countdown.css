@@ -39,12 +39,20 @@
 	width: 100%;
 	max-width: var(--hosen-container-max-width);
 	margin: 0 auto;
-	padding: 0 var(--section-container-padding-mobile, var(--hosen-container-padding-mobile));
+	padding: 0
+		var(
+			--section-container-padding-mobile,
+			var(--hosen-container-padding-mobile)
+		);
 }
 
 @media screen and (min-width: 750px) {
 	.hosen-countdown__container {
-		padding: 0 var(--section-container-padding-desktop, var(--hosen-container-padding-desktop));
+		padding: 0
+			var(
+				--section-container-padding-desktop,
+				var(--hosen-container-padding-desktop)
+			);
 	}
 }
 
@@ -170,7 +178,3 @@
 		font-size: 1.4rem;
 	}
 }
-
-/* Button - uses .hosen-button from hosen-base.css */
-
-/* Accessibility */

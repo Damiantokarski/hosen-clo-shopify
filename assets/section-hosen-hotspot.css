@@ -398,14 +398,14 @@
 	}
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 750px) {
 	.hosen-hotspot__container {
 		padding: 0 3rem;
 	}
 
 	.hosen-hotspot__grid {
 		grid-template-columns: 1fr;
-		gap: 1.5rem;
+		gap: 3rem;
 	}
 
 	.hosen-hotspot__image-wrapper {

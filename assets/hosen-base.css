@@ -245,16 +245,7 @@
   animation: hosen-arrow-diagonal 0.6s ease-in-out infinite;
 }
 
-/* Modifier: Transparent variant for overlays */
-.hosen-button--transparent {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 
-.hosen-button--transparent:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #000;
-  border-color: #fff;
-}
 
 /* -----------------------------------------------------
    6. Placeholder Styles

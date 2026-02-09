@@ -346,10 +346,10 @@
 			"block_order": ["image_1", "image_2", "image_3", "image_4"],
 			"settings": {
 				"subheading": "STAY IN TOUCH",
-				"heading": "GIVE US A FOLLOW @BERLIN",
+				"heading": "GIVE US A FOLLOW @hosen.clo",
 				"heading_size": "h1",
-				"link_label": "GET INSPIRED WITH @BERLIN",
-				"link_url": "https://instagram.com",
+				"link_label": "GET INSPIRED WITH @hosen.clo",
+				"link_url": "https://instagram.com/hosen.clo",
 				"color_scheme": "scheme-1",
 				"padding_top": 60,
 				"padding_bottom": 60

@@ -7,23 +7,23 @@
   
   <div class="hosen-carousel__container">
     <div class="hosen-carousel__track">
-      {% for block in section.blocks %}
-        <div class="hosen-carousel__slide" {{ block.shopify_attributes }}>
+      {% for section in section.blocks %}
+        <div class="hosen-carousel__slide" {{ section.shopify_attributes }}>
           <div class="hosen-carousel__image-wrapper">
-            {% if block.settings.image != blank %}
+            {% if section.settings.image != blank %}
               <img 
-                src="{{ block.settings.image | image_url: width: 1920 }}"
-                srcset="{{ block.settings.image | image_url: width: 375 }} 375w,
-                        {{ block.settings.image | image_url: width: 750 }} 750w,
-                        {{ block.settings.image | image_url: width: 1100 }} 1100w,
-                        {{ block.settings.image | image_url: width: 1500 }} 1500w,
-                        {{ block.settings.image | image_url: width: 1920 }} 1920w"
+                src="{{ section.settings.image | image_url: width: 1920 }}"
+                srcset="{{ section.settings.image | image_url: width: 375 }} 375w,
+                        {{ section.settings.image | image_url: width: 750 }} 750w,
+                        {{ section.settings.image | image_url: width: 1100 }} 1100w,
+                        {{ section.settings.image | image_url: width: 1500 }} 1500w,
+                        {{ section.settings.image | image_url: width: 1920 }} 1920w"
                 sizes="100vw"
-                alt="{{ block.settings.image.alt | default: block.settings.heading }}"
+                alt="{{ section.settings.image.alt | default: section.settings.heading }}"
                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                 class="hosen-carousel__image"
-                width="{{ block.settings.image.width }}"
-                height="{{ block.settings.image.height }}"
+                width="{{ section.settings.image.width }}"
+                height="{{ section.settings.image.height }}"
               >
             {% else %}
               <div class="hosen-carousel__placeholder">
@@ -33,24 +33,24 @@
             <div class="hosen-carousel__overlay" style="--overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};"></div>
           </div>
           
-          <div class="hosen-carousel__content hosen-carousel__content--{{ block.settings.content_position }}">
+          <div class="hosen-carousel__content hosen-carousel__content--{{ section.settings.content_position }}">
             <div class="hosen-carousel__content-inner">
-              {% if block.settings.subheading != blank %}
-                <span class="hosen-carousel__subheading">{{ block.settings.subheading }}</span>
+              {% if section.settings.subheading != blank %}
+                <span class="hosen-carousel__subheading">{{ section.settings.subheading }}</span>
               {% endif %}
               
-              {% if block.settings.heading != blank %}
-                <h2 class="hosen-carousel__heading {{ block.settings.heading_size }}">{{ block.settings.heading }}</h2>
+              {% if section.settings.heading != blank %}
+                <h2 class="hosen-carousel__heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
               {% endif %}
               
-              {% if block.settings.text != blank %}
-                <div class="hosen-carousel__text">{{ block.settings.text }}</div>
+              {% if section.settings.text != blank %}
+                <div class="hosen-carousel__text">{{ section.settings.text }}</div>
               {% endif %}
               
-              {% if block.settings.button_label != blank %}
-                <a href="{{ block.settings.button_link }}" class="hosen-carousel__button">
-                  <span class="hosen-carousel__button-text">{{ block.settings.button_label }}</span>
-                  <span class="hosen-carousel__button-icon">
+              {% if section.settings.button_label != blank %}
+                <a href="{{ section.settings.button_link }}" class="hosen-button">
+                  <span>{{ section.settings.button_label }}</span>
+                  <span class="hosen-button__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
                       <polyline points="7 7 17 7 17 17"></polyline>

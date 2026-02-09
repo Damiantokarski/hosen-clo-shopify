@@ -32,7 +32,7 @@
 }
 
 .hosen-featured__subheading {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -328,12 +328,10 @@
     align-items: flex-start;
   }
 
-  .hosen-featured__title.h0 {
-    font-size: 2.5rem;
-  }
+ 
 
   .hosen-featured__title.h1 {
-    font-size: 2rem;
+    font-size: 3.6rem;
   }
 
   .hosen-featured__products {
@@ -348,11 +346,11 @@
   }
 
   .hosen-featured__product-title {
-    font-size: 0.85rem;
+    font-size: 1.3rem;
     margin-top: 0;
   }
 
   .hosen-featured__price {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
   }
 }

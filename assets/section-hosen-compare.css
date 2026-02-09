@@ -368,7 +368,7 @@
 @media screen and (max-width: 750px) {
   .hosen-compare__grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 3rem;
   }
 
   .hosen-compare__slider-wrapper {

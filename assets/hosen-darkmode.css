@@ -254,40 +254,25 @@ html.darkmode .darkmode-icon--dark {
 /* -----------------------------------------
    Global Hosen Buttons - Dark Mode
    ----------------------------------------- */
-html.darkmode
-	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
-		.hosen-compare__slider-button
-	):not(.hosen-carousel__nav-button):not([class*="__button-icon"]) {
+html.darkmode .hosen-button {
 	background-color: rgb(220, 220, 220) !important;
 	color: rgb(18, 18, 18) !important;
 	border-color: rgba(220, 220, 220, 0.5) !important;
 }
 
-html.darkmode
-	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
-		.hosen-compare__slider-button
-	):not(.hosen-carousel__nav-button):not([class*="__button-icon"])
-	span,
-html.darkmode
-	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
-		.hosen-compare__slider-button
-	):not(.hosen-carousel__nav-button):not([class*="__button-icon"])
-	.button-text {
+html.darkmode .hosen-button span {
 	color: rgb(18, 18, 18) !important;
 	background: none !important;
 	background-color: transparent !important;
 }
 
-html.darkmode
-	[class*="hosen-"][class*="__button"]:not(.hosen-hotspot__button):not(
-		.hosen-compare__slider-button
-	):not(.hosen-carousel__nav-button):not([class*="__button-icon"]):hover {
+html.darkmode .hosen-button:hover {
 	background-color: rgba(220, 220, 220, 0.9) !important;
 	color: rgb(18, 18, 18) !important;
 }
 
-html.darkmode [class*="hosen-"][class*="__button-icon"],
-html.darkmode [class*="hosen-"][class*="__button-icon"] svg {
+html.darkmode .hosen-button__icon,
+html.darkmode .hosen-button__icon svg {
 	background-color: transparent !important;
 	background: transparent !important;
 	color: rgb(18, 18, 18) !important;
@@ -390,28 +375,6 @@ html.darkmode .hosen-countdown__timer {
 
 html.darkmode .hosen-countdown__separator {
 	background-color: rgba(var(--color-foreground), 0.3);
-}
-
-html.darkmode .hosen-countdown__button {
-	background-color: rgb(220, 220, 220) !important;
-	color: rgb(18, 18, 18) !important;
-	border-color: rgba(220, 220, 220, 0.5) !important;
-}
-
-html.darkmode .hosen-countdown__button span,
-html.darkmode .hosen-countdown__button-text {
-	color: rgb(18, 18, 18) !important;
-}
-
-html.darkmode .hosen-countdown__button:hover {
-	background-color: rgba(220, 220, 220, 0.9) !important;
-	color: rgb(18, 18, 18) !important;
-}
-
-html.darkmode .hosen-countdown__button-icon,
-html.darkmode .hosen-countdown__button-icon svg {
-	color: rgb(18, 18, 18) !important;
-	stroke: rgb(18, 18, 18) !important;
 }
 
 /* -----------------------------------------

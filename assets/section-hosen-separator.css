@@ -1,7 +1,6 @@
 .hosen-separator {
 	width: 100%;
-	padding-top: var(--padding-top, 20px);
-	padding-bottom: var(--padding-bottom, 20px);
+
 }
 
 .hosen-separator__container {
@@ -10,8 +9,3 @@
 	height: 1px;
 }
 
-@media screen and (min-width: 750px) {
-	.hosen-separator__container {
-		padding: 0 3rem;
-	}
-}
